@@ -1,10 +1,12 @@
-import React from 'react';
-import { Box, Container, Typography, Button } from '@mui/material';
 import homepageContent from '@/content/homepage';
+import { Box, Button, Container, Typography } from '@mui/material';
+import { FlipWords } from '../ui/flip-words';
 
 const HomeBanner = () => {
 
-    const { title, description } = homepageContent.banner;
+    const { changingText, staticText, description } = homepageContent.banner;
+    // const speratedWords = title.split(' ');
+
   return (
     <Box
       sx={{
@@ -38,7 +40,8 @@ const HomeBanner = () => {
             fontWeight: 'bold',
             position: 'relative',
             color: '#fff',
-            display: 'inline-block',
+            display: 'block',
+            mb: 2,
            /*  '&::after': {
               content: '""',
               position: 'absolute',
@@ -50,12 +53,17 @@ const HomeBanner = () => {
             }, */
           }}
         >
-          {title}
+          {staticText}
+          <FlipWords words={changingText} />
+
         </Typography>
+
         <Typography
           variant="h5"
           sx={{
-            marginTop: '20px',
+            position: 'relative',
+            display: 'inline-block',
+            fontWeight: '500',
             color: 'background.lightGrey',
             fontSize: '1.25rem',
           }}
@@ -66,7 +74,15 @@ const HomeBanner = () => {
           <Button variant="contained" color="primary" size="large" sx={{ marginRight: 2 }}>
             Schedule Free Strategy Call
           </Button>
-          <Button variant="outlined" color="primary" size="large">
+          <Button sx={{
+           position: 'relative',
+           display: 'inline-block',
+           color: 'secondary.main',
+           ':hover':{
+            bgcolor: 'secondary.main',
+            color: 'background.lightGrey',
+           }
+            }} variant="outlined" color="secondary" size="large">
             See our Work
           </Button>
         </Box>
