@@ -12,7 +12,7 @@ const TopBar = () => {
       sx={{
         display: { xs: "none", md: "block" },
         bgcolor: 'secondary.main',
-        height: '60px',
+        height: '40px',
         color: '#fff',
       }}
     >
