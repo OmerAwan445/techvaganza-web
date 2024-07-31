@@ -1,7 +1,7 @@
-'use client';
-import { createTheme } from '@mui/material/styles';
+"use client";
+import { createTheme } from "@mui/material/styles";
 
-declare module '@mui/material/styles' {
+declare module "@mui/material/styles" {
   interface TypeBackground {
     black: string;
     brownish: string;
@@ -13,108 +13,111 @@ declare module '@mui/material/styles' {
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#37B7C3',
-      light: '#9c6530',
+      main: "#0077b6", // Ocean Blue Main
+      light: "#00b4d8", // Ocean Blue Light
+      dark: "#03045e", // Ocean Blue Dark
     },
     secondary: {
-      main: '#005EB8',
-      light: '#fafafa',
+      main: "#52b788", // Parrot Green Main
+      light: "#95d5b2", // Parrot Green Light
+      dark: "#1b4332", // Parrot Green Dark
     },
     background: {
-      default: '#f5f5f5',
-      paper: '#00000',
-      black: '#222222',
+      default: "#adb5bd", // Ash Grey Main
       lightGrey: "#ffff",
-      lightBrown: "#baab9b",
+      paper: "#dee2e6", // Ash Grey Light
+      black: "#000000",
+      brownish: "#f08080", // Peach Dark
+      lightBrown: "#ffd6e7", // Peach Light
     },
     text: {
-      primary: '#333333',
-      secondary: '#f3f3f3',
+      primary: "#222831", // Dark Charcoal for primary text
+      secondary: "#EEEEEE", // Light Grey for secondary text
     },
   },
   typography: {
     h1: {
-      fontSize: '6rem', // Default font size for h1
-      '@media (max-width:1200px)': {
-        fontSize: '4.5rem', // Adjust font size for large screens
+      fontSize: "6rem", // Default font size for h1
+      "@media (max-width:1200px)": {
+        fontSize: "4.5rem", // Adjust font size for large screens
       },
-      '@media (max-width:900px)': {
-        fontSize: '3.75rem', // Adjust font size for medium screens
+      "@media (max-width:900px)": {
+        fontSize: "3.75rem", // Adjust font size for medium screens
       },
-      '@media (max-width:600px)': {
-        fontSize: '3rem', // Adjust font size for small screens
+      "@media (max-width:600px)": {
+        fontSize: "3rem", // Adjust font size for small screens
       },
     },
     h2: {
-      fontSize: '3.75rem', // Default font size for h2
-      '@media (max-width:1200px)': {
-        fontSize: '3rem', // Adjust font size for large screens
+      fontSize: "3.75rem", // Default font size for h2
+      "@media (max-width:1200px)": {
+        fontSize: "3rem", // Adjust font size for large screens
       },
-      '@media (max-width:900px)': {
-        fontSize: '2.5rem', // Adjust font size for medium screens
+      "@media (max-width:900px)": {
+        fontSize: "2.5rem", // Adjust font size for medium screens
       },
-      '@media (max-width:600px)': {
-        fontSize: '2.125rem', // Adjust font size for small screens
+      "@media (max-width:600px)": {
+        fontSize: "2.125rem", // Adjust font size for small screens
       },
     },
     h3: {
-      fontSize: '3rem', // Default font size for h3
-      '@media (max-width:1200px)': {
-        fontSize: '2.5rem', // Adjust font size for large screens
+      fontSize: "3rem", // Default font size for h3
+      "@media (max-width:1200px)": {
+        fontSize: "2.5rem", // Adjust font size for large screens
       },
-      '@media (max-width:900px)': {
-        fontSize: '2.125rem', // Adjust font size for medium screens
+      "@media (max-width:900px)": {
+        fontSize: "2.125rem", // Adjust font size for medium screens
       },
-      '@media (max-width:600px)': {
-        fontSize: '1.75rem', // Adjust font size for small screens
+      "@media (max-width:600px)": {
+        fontSize: "1.75rem", // Adjust font size for small screens
       },
     },
     h4: {
-      fontSize: '2.125rem', // Default font size for h4
-      '@media (max-width:1200px)': {
-        fontSize: '1.75rem', // Adjust font size for large screens
+      fontSize: "2.125rem", // Default font size for h4
+      "@media (max-width:1200px)": {
+        fontSize: "1.75rem", // Adjust font size for large screens
       },
-      '@media (max-width:900px)': {
-        fontSize: '1.5rem', // Adjust font size for medium screens
+      "@media (max-width:900px)": {
+        fontSize: "1.5rem", // Adjust font size for medium screens
       },
-      '@media (max-width:600px)': {
-        fontSize: '1.25rem', // Adjust font size for small screens
+      "@media (max-width:600px)": {
+        fontSize: "1.25rem", // Adjust font size for small screens
       },
     },
     h5: {
-      fontSize: '1.5rem', // Default font size for h5
-      '@media (max-width:1200px)': {
-        fontSize: '1.375rem', // Adjust font size for large screens
+      fontSize: "1.5rem", // Default font size for h5
+      "@media (max-width:1200px)": {
+        fontSize: "1.375rem", // Adjust font size for large screens
       },
-      '@media (max-width:900px)': {
-        fontSize: '1.25rem', // Adjust font size for medium screens
+      "@media (max-width:900px)": {
+        fontSize: "1.25rem", // Adjust font size for medium screens
       },
-      '@media (max-width:600px)': {
-        fontSize: '1rem', // Adjust font size for small screens
+      "@media (max-width:600px)": {
+        fontSize: "1rem", // Adjust font size for small screens
       },
     },
     h6: {
-      fontSize: '1.25rem', // Default font size for h6
-      '@media (max-width:1200px)': {
-        fontSize: '1.125rem', // Adjust font size for large screens
+      fontSize: "1.25rem", // Default font size for h6
+      "@media (max-width:1200px)": {
+        fontSize: "1.125rem", // Adjust font size for large screens
       },
-      '@media (max-width:900px)': {
-        fontSize: '1rem', // Adjust font size for medium screens
+      "@media (max-width:900px)": {
+        fontSize: "1rem", // Adjust font size for medium screens
       },
-      '@media (max-width:600px)': {
-        fontSize: '0.875rem', // Adjust font size for small screens
+      "@media (max-width:600px)": {
+        fontSize: "0.875rem", // Adjust font size for small screens
       },
     },
     body1: {
-      fontSize: '1rem', // Default font size for body1 (paragraphs)
-      '@media (max-width:1200px)': {
-        fontSize: '0.9375rem', // Adjust font size for large screens
+      fontSize: "1rem", // Default font size for body1 (paragraphs)
+      "@media (max-width:1200px)": {
+        fontSize: "0.9375rem", // Adjust font size for large screens
       },
-      '@media (max-width:900px)': {
-        fontSize: '0.875rem', // Adjust font size for medium screens
+      "@media (max-width:900px)": {
+        fontSize: "0.875rem", // Adjust font size for medium screens
       },
-      '@media (max-width:600px)': {
-        fontSize: '0.8125rem', // Adjust font size for small screens
+      "@media (max-width:600px)": {
+        fontSize: "0.8125rem", // Adjust font size for small screens
       },
     },
   },
@@ -123,6 +126,4 @@ const theme = createTheme({
   },
 });
 
-
 export default theme;
-
