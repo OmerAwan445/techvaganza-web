@@ -6,6 +6,7 @@ declare module '@mui/material/styles' {
     black: string;
     brownish: string;
     lightBrown: string;
+    lightGrey: string;
   }
 }
 
@@ -21,9 +22,9 @@ const theme = createTheme({
     },
     background: {
       default: '#f5f5f5',
-      paper: '#ffffff',
+      paper: '#00000',
       black: '#222222',
-      brownish: "#aa9784",
+      lightGrey: "#ffff",
       lightBrown: "#baab9b",
     },
     text: {
