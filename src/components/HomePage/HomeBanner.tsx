@@ -5,7 +5,6 @@ import { FlipWords } from '../ui/flip-words';
 const HomeBanner = () => {
 
     const { changingText, staticText, description } = homepageContent.banner;
-    // const speratedWords = title.split(' ');
 
   return (
     <Box
@@ -19,7 +18,7 @@ const HomeBanner = () => {
         justifyContent: 'center',
         textAlign: 'center',
         position: 'relative',
-        width: '100vw',
+        width: '99vw',
       }}
     >
       <Box
