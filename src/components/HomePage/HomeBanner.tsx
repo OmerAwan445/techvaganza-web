@@ -1,9 +1,10 @@
-import React from "react";
-import { Box, Container, Typography, Button } from "@mui/material";
 import homepageContent from "@/content/homepage";
+import { Box, Button, Container, Typography } from "@mui/material";
+import { FlipWords } from "../ui/flip-words";
 
 const HomeBanner = () => {
-  const { title, description } = homepageContent.banner;
+  const { changingText, staticText, description } = homepageContent.banner;
+
   return (
     <Box
       sx={{
@@ -16,7 +17,7 @@ const HomeBanner = () => {
         justifyContent: "center",
         textAlign: "center",
         position: "relative",
-        width: "100vw",
+        width: "99vw",
       }}
     >
       <Box
@@ -37,7 +38,8 @@ const HomeBanner = () => {
             fontWeight: "bold",
             position: "relative",
             color: "#fff",
-            display: "inline-block",
+            display: "block",
+            mb: 2,
             /*  '&::after': {
               content: '""',
               position: 'absolute',
@@ -49,13 +51,16 @@ const HomeBanner = () => {
             }, */
           }}
         >
-          {title}
+          {staticText}
+          <FlipWords words={changingText} />
         </Typography>
 
         <Typography
           variant="h5"
           sx={{
-            marginTop: "20px",
+            position: "relative",
+            display: "inline-block",
+            fontWeight: "500",
             color: "background.lightGrey",
             fontSize: "1.25rem",
           }}
@@ -71,7 +76,20 @@ const HomeBanner = () => {
           >
             Schedule Free Strategy Call
           </Button>
-          <Button variant="outlined" color="primary" size="large">
+          <Button
+            sx={{
+              position: "relative",
+              display: "inline-block",
+              color: "secondary.main",
+              ":hover": {
+                bgcolor: "secondary.main",
+                color: "background.lightGrey",
+              },
+            }}
+            variant="outlined"
+            color="secondary"
+            size="large"
+          >
             See our Work
           </Button>
         </Box>
