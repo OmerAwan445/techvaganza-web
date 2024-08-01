@@ -3,10 +3,11 @@ import InfoCards from "@/components/HomePage/InfoCards/InfoCards";
 import { Box } from "@mui/material";
 import Insights from "../components/HomePage/Insights/Insights";
 import StatsSection from "../components/HomePage/StatsContent/StatsSection";
+import { Box } from "@mui/material";
 
 export default function Home() {
   return (
-    <Box>
+    <Box sx={{ overflow: "hidden" }}>
       <HomeBanner />
       <InfoCards />
       <Insights />

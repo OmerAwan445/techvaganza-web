@@ -51,6 +51,7 @@ const HomeBanner = () => {
         >
           {title}
         </Typography>
+
         <Typography
           variant="h5"
           sx={{
