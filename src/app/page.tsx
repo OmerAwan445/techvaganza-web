@@ -1,15 +1,16 @@
 import HomeBanner from "@/components/HomePage/HomeBanner";
 import InfoCards from "@/components/HomePage/InfoCards/InfoCards";
-import Content from "@/content/homepage";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import Insights from "../components/HomePage/Insights/Insights";
+import StatsSection from "../components/HomePage/StatsContent/StatsSection";
 
 export default function Home() {
   return (
     <Box>
       <HomeBanner />
       <InfoCards />
-      <Typography variant="h1">{Content.title}</Typography>
-      <Typography variant="body1">{Content.description}</Typography>
+      <Insights />
+      <StatsSection />
     </Box>
   );
 }

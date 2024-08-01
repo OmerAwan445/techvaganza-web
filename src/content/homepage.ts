@@ -1,6 +1,8 @@
 import { FaPencilRuler, FaLightbulb, FaTools } from "react-icons/fa";
+import StatsContent from "../components/HomePage/StatsContent/StatsSection";
 
 const homepageContent = {
+  // Banner
   title: "Welcome to the Tech Vaganza",
   description: "This is a simple website for our software house",
   banner: {
@@ -8,6 +10,8 @@ const homepageContent = {
     description:
       "Access 2,000+ passionate and experienced software engineers with skillsets in 100+ technologies, in your timezone.",
   },
+
+  // InfoCards
   infoCardsTitle: "Our Process",
   infoCardsDescription: "We follow these steps to deliver the best software.",
   infoCards: [
@@ -30,6 +34,31 @@ const homepageContent = {
         "Our expert developers go through every scenario and delivered the best product.",
     },
   ],
+
+  // StatsContent
+  statsContentMainTitle: "Translating technology into a positive impact",
+  statsContentDescription:
+    "Our approach allows us to deliver exceptional experiences that drive growth and success for all stakeholders. Let’s rise to new heights with the power of digital transformation.",
+  stats: [
+    {
+      number: "47+",
+      text: "Years of continual excellence",
+    },
+    {
+      number: "7000+",
+      text: "Change makers driving revolution",
+    },
+    {
+      number: "16+",
+      text: "Countries with our presence and clientele",
+    },
+    {
+      number: "618+",
+      text: "Active clients across the globe",
+    },
+  ],
+  statsContentBottomHeading:
+    "We rethink business growth for you through our collective experience with strategic partner ecosystem.",
 };
 
 export default homepageContent;
