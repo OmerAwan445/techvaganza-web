@@ -4,12 +4,6 @@ import React, { useState } from "react";
 import { Box, Typography, Slider } from "@mui/material";
 import { motion } from "framer-motion";
 
-type ServiceCardProps = {
-  title: string;
-  description: string;
-  icon: React.ElementType;
-};
-
 const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
   const [sliderValue, setSliderValue] = useState(0);
 
