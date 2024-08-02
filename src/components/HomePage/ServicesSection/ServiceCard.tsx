@@ -65,8 +65,8 @@ const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            opacity: sliderValue === 0 ? "0" : "1",
-            transition: "all 0.5s ease-in-out ",
+            opacity: sliderValue,
+            transition: "opacity 0.5s ease-in-out",
           }}
         >
           <Slider

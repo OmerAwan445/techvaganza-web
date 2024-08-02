@@ -1,22 +1,37 @@
-import { Box } from "@mui/material";
-import React from "react";
+'use client';
+
+import { Box, Container, Grid, Typography } from '@mui/material'
+import React from 'react'
+import EventCard from './EventCard'
+import homepageContent from '@/content/homepage'
+import { SwiperSlide } from 'swiper/react'
+import FreeModeSlider from '@/components/commons/Sliders/FreeModeSlider'
 
 const Insights = () => {
-  return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "500px",
-        width: "100%",
-        backgroundColor: "background.default",
-        color: "text",
-      }}
-    >
-      Hello World
-    </Box>
-  );
-};
+  const insights = homepageContent.insights;
 
-export default Insights;
+  return (
+    <Container sx={{ my: 4 }}>
+      <Typography variant="h3" align="center" sx={{ fontWeight: 400, marginBottom: 3 }}>Featured Insights</Typography>
+    <Grid sx={{display: { xs:'none', md:'none', lg: 'flex' }}} container spacing={4}>
+      {insights.map((el)=>
+      <Grid item key={el.title} xs={12} sm={6} md={4} lg={4}>
+        <EventCard {...el} />
+      </Grid>
+        )
+        }
+       </Grid>
+        <Box sx={{display: { xs: 'block', md:'block', lg:'none' }}}>
+          <FreeModeSlider>
+        {insights.map((el)=>
+            <SwiperSlide key={el.title}>
+              <EventCard {...el} />
+            </SwiperSlide>
+        )}
+        </FreeModeSlider>
+        </Box>
+  </Container>
+  )
+}
+
+export default Insights
