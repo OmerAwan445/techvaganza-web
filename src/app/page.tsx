@@ -4,6 +4,7 @@ import InfoCards from "@/components/HomePage/InfoCards/InfoCards";
 import { Box } from "@mui/material";
 import Insights from "../components/HomePage/Insights/Insights";
 import StatsSection from "../components/HomePage/StatsContent/StatsSection";
+import ServicesSection from "@/components/HomePage/ServicesSection/ServicesSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <FeaturesInsight />
       <InfoCards />
       <StatsSection />
+      <ServicesSection />
     </Box>
   );
 }

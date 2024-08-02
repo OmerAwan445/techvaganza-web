@@ -1,4 +1,12 @@
-import { FaLightbulb, FaPencilRuler, FaTools } from "react-icons/fa";
+import { FaPencilRuler, FaLightbulb, FaTools } from "react-icons/fa";
+import {
+  AiOutlineCloud,
+  AiOutlineGlobal,
+  AiOutlineMobile,
+} from "react-icons/ai";
+import { BiBrain } from "react-icons/bi";
+import { GiCog, GiNetworkBars } from "react-icons/gi";
+import { MdOutlineBugReport, MdOutlineSecurity } from "react-icons/md";
 
 const homepageContent = {
   // Banner
@@ -92,6 +100,59 @@ const homepageContent = {
   ],
   statsContentBottomHeading:
     "We rethink business growth for you through our collective experience with strategic partner ecosystem.",
+
+  // Services Data
+
+  servicesData: [
+    {
+      title: "Web Development",
+      description:
+        "Deliver high-quality web development, design and functionality tailored for your business.",
+      icon: AiOutlineGlobal,
+    },
+    {
+      title: "Digital Transformation",
+      description:
+        "Digitize, automate and accelerate your business operations through digital transformation.",
+      icon: GiCog,
+    },
+    {
+      title: "Generative AI",
+      description:
+        "Harness Generative AI and new technologies to innovate, automate, and stay ahead of the competition.",
+      icon: BiBrain,
+    },
+    {
+      title: "Mobile App Development",
+      description:
+        "Make your mobile app stand out from the crowd with Devsinc's Android and iOS development.",
+      icon: AiOutlineMobile,
+    },
+    {
+      title: "Custom Development",
+      description:
+        "Get custom software perfectly built for your business to boost productivity and efficiency.",
+      icon: GiNetworkBars,
+    },
+    {
+      title: "Cybersecurity Solutions",
+      description:
+        "Keep your digital assets safe and protect your business from threats with our cybersecurity solutions.",
+      icon: MdOutlineSecurity,
+    },
+    {
+      title: "Dynamics 365 ERP",
+      description:
+        "Drive efficiency and growth with tailored and custom Microsoft Dynamics 365 solutions.",
+      icon: AiOutlineCloud,
+    },
+    {
+      title: "QA Testing & Automation",
+      description:
+        "Improve your software's reliability with our comprehensive QA testing services.",
+      icon: MdOutlineBugReport,
+    },
+  ],
 };
 
 export default homepageContent;
