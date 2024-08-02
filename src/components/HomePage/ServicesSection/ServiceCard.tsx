@@ -11,7 +11,7 @@ type ServiceCardProps = {
 };
 
 const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
-  const [sliderValue, setSliderValue] = useState(50);
+  const [sliderValue, setSliderValue] = useState(0);
 
   return (
     <motion.div
@@ -65,6 +65,8 @@ const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            opacity: sliderValue === 0 ? "0" : "1",
+            transition: "all 0.5s ease-in-out ",
           }}
         >
           <Slider
