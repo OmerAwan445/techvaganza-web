@@ -1,12 +1,14 @@
 import * as React from 'react';
 import { Box, Grid, Link, Typography, Container, IconButton } from '@mui/material';
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import homepageContent from '@/content/homepage';
+import headerContent from '@/content/header';
 
 // Replace these with your own social media URLs
 const socialMediaLinks = {
-  facebook: '#',
-  twitter: '#',
-  instagram: '#',
+  facebook: headerContent.topbar.facebook,
+  twitter: headerContent.topbar.twitter,
+  instagram: headerContent.topbar.instagram,
 };
 
 const Footer: React.FC = () => {

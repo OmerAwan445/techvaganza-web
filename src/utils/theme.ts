@@ -24,8 +24,8 @@ const theme = createTheme({
     },
     background: {
       default: "#adb5bd", // Ash Grey Main
-      lightGrey: "#ffff",
       paper: "#dee2e6", // Ash Grey Light
+      lightGrey: "#ffff",
       black: "#000000",
       brownish: "#f08080", // Peach Dark
       lightBrown: "#ffd6e7", // Peach Light
