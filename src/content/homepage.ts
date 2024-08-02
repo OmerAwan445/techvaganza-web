@@ -1,5 +1,4 @@
-import { FaPencilRuler, FaLightbulb, FaTools } from "react-icons/fa";
-import StatsContent from "../components/HomePage/StatsContent/StatsSection";
+import { FaLightbulb, FaPencilRuler, FaTools } from "react-icons/fa";
 
 const homepageContent = {
   // Banner
@@ -34,6 +33,40 @@ const homepageContent = {
         "Our expert developers go through every scenario and delivered the best product.",
     },
   ],
+
+  // Feature Insights
+  insights:[
+    {
+      category: 'EVENT',
+      title: 'Shaping new frontiers in banking at TCF 2024',
+      imageUrl: "/images/event cards/1.jpg",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      date: "14th to 16th May 2024",
+      location: "Dublin"
+    },
+    {
+      category: 'EVENT',
+      title: 'Shaping new frontiers in banking at TCF 2024',
+      imageUrl: "/images/event cards/1.jpg",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      date: "14th to 16th May 2024",
+      location: "Dublin"
+    },
+    {
+      category: 'NEWSROOM',
+      title: 'Systems Limited graced with 3 accolades at IT & ITES Export Awards 2024 by PSEB',
+      imageUrl: "/images/event cards/1.jpg",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    },
+    {
+      category: 'NEWSROOM',
+      title: 'Systems Limited graced with 3 accolades at IT & ITES Export Awards 2024 by PSEB',
+      imageUrl: "/images/event cards/1.jpg",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    },
+
+  ],
+
 
   // StatsContent
   statsContentMainTitle: "Translating technology into a positive impact",
