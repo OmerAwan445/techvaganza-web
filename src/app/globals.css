@@ -80,3 +80,11 @@
 ::-webkit-scrollbar-thumb {
   background: #000000;
 }
+
+
+ /* Slider css */
+@media (max-width: 639.98px) {
+  .custom-Slider .swiper-slide{
+    width:auto !important;
+  }
+}

@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <Box sx={{ overflow: "hidden" }}>
       <HomeBanner />
-      <FeaturesInsight />
       <InfoCards />
+      <FeaturesInsight />
       <StatsSection />
       <ServicesSection />
     </Box>
