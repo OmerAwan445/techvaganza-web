@@ -52,7 +52,7 @@ const HomeBanner = () => {
           }}
         >
           {staticText}
-          <FlipWords words={changingText} />
+          <FlipWords words={changingText} className="text-purple-400" />
         </Typography>
 
         <Typography

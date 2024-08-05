@@ -2,21 +2,12 @@
 "use client";
 import React, { useState } from "react";
 import { Box, Typography, Slider } from "@mui/material";
-import { motion } from "framer-motion";
+import SlideWrapper from "@/components/Wrapper/SlideWrapper";
 
 const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
   const [sliderValue, setSliderValue] = useState(0);
-
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      onMouseEnter={() => setSliderValue(100)}
-      onMouseLeave={() => setSliderValue(0)}
-      style={{ flex: "1 1 100%", boxSizing: "border-box" }}
-    >
+    <SlideWrapper>
       <Box
         sx={{
           display: "flex",
@@ -33,6 +24,8 @@ const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
             backgroundColor: "background.paper",
           },
         }}
+        onMouseEnter={() => setSliderValue(100)}
+        onMouseLeave={() => setSliderValue(0)}
       >
         <Box sx={{ fontSize: 40 }}>
           <Icon />
@@ -81,7 +74,7 @@ const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
           />
         </Box>
       </Box>
-    </motion.div>
+    </SlideWrapper>
   );
 };
 
