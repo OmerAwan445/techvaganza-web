@@ -11,6 +11,7 @@ const Insights = () => {
   const insights = homepageContent.insights;
 
   return (
+
     <Container sx={{ my: 4 }}>
       <SlideWrapper>
         <Typography
@@ -40,6 +41,7 @@ const Insights = () => {
             ))}
           </FreeModeSlider>
         </Box>
+
       </SlideWrapper>
     </Container>
   );

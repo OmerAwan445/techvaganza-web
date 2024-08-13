@@ -6,7 +6,6 @@ import 'swiper/css/free-mode';
 import { FreeMode } from "swiper/modules";
 import { Swiper } from "swiper/react";
 import { Box } from '@mui/material';
-import '@/assets/css/Slider.css'
 
 export interface SliderProps {
     children: ReactNode
