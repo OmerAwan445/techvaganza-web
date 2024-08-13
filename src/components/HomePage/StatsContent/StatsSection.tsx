@@ -1,19 +1,14 @@
 "use client";
-import React from "react";
-import { Box, Typography, Divider, Grid, Link } from "@mui/material";
-import { motion } from "framer-motion";
 import homepageContent from "@/content/homepage";
+import { Box, Divider, Grid, Link, Typography } from "@mui/material";
+import SlideWrapper from "@/components/Wrapper/SlideWrapper";
 
 const StatsSection = () => {
   return (
     <Box sx={{ padding: 20 }}>
-      <Grid container spacing={6} alignItems="center">
-        <Grid item xs={12} md={6}>
-          <motion.div
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          >
+      <SlideWrapper>
+        <Grid container spacing={6} alignItems="center">
+          <Grid item xs={12} md={6}>
             <Typography variant="h4" color="text.primary" gutterBottom>
               {homepageContent.statsContentMainTitle}
             </Typography>
@@ -28,15 +23,9 @@ const StatsSection = () => {
             >
               LEARN MORE →
             </Link>
-          </motion.div>
-        </Grid>
-        <Grid item xs={12} md={6} sx={{ position: "relative" }}>
-          <motion.div
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            style={{ position: "relative", paddingLeft: "20px" }}
-          >
+          </Grid>
+
+          <Grid item xs={12} md={6} sx={{ position: "relative" }}>
             <Divider
               orientation="vertical"
               flexItem
@@ -61,9 +50,9 @@ const StatsSection = () => {
                 </Grid>
               ))}
             </Grid>
-          </motion.div>
+          </Grid>
         </Grid>
-      </Grid>
+      </SlideWrapper>
       <Box sx={{ textAlign: "center", marginTop: 8, padding: 8 }}>
         <Typography variant="h3" color="text.primary">
           {homepageContent.statsContentBottomHeading}

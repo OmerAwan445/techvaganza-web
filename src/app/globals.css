@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -80,7 +79,6 @@
 ::-webkit-scrollbar-thumb {
   background: #000000;
 }
-
 
  /* Slider css */
 @media (max-width: 639.98px) {
