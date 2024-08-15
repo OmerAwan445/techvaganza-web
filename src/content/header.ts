@@ -1,6 +1,6 @@
 const headerContent = {
     topbar: {
-        title: 'Software House',
+        title: 'Techvaganza',
         phoneNum: "123-456-7890",
         email: "office@vaganza.tech",
         facebook: "https://www.facebook.com",

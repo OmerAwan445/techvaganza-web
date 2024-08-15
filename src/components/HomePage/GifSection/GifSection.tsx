@@ -2,9 +2,10 @@ import { Box, Button, Typography } from "@mui/material";
 const GifSection = () => (
   <Box
     sx={{
+      mb: -1,
       position: "relative",
       height: "60vh",
-      width: "100%",
+      width: "100vw",
       overflow: "hidden",
       display: "flex",
       alignItems: "center",
@@ -13,7 +14,7 @@ const GifSection = () => (
   >
     <Box
       component="video"
-      src="/images/GifVideo/1.mp4" // Replace with your video URL
+      src="/images/GifVideo/1.mp4"
       autoPlay
       loop
       muted

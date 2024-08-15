@@ -12,14 +12,14 @@ const Insights = () => {
 
   return (
 
-    <Container sx={{ my: 4 }}>
+    <Container sx={{ my: 5 }}>
       <SlideWrapper>
         <Typography
           variant="h3"
           align="center"
           sx={{ fontWeight: 400, marginBottom: 3 }}
         >
-          Featured Insights
+          Services & Products
         </Typography>
         <Grid
           sx={{ display: { xs: "none", md: "none", lg: "flex" } }}

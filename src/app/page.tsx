@@ -14,9 +14,9 @@ export default function Home() {
       <InfoCards />
       <FeaturesInsight />
       <StatsSection />
-      <ServicesSection />
+      {/* <ServicesSection /> */}
       <GifSection />
-      <CTASection />
+      {/* <CTASection /> */}
     </Box>
   );
 }

@@ -1,17 +1,21 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import InfoCard from "./Card";
 import homepageContent from "@/content/homepage";
 
 const InfoCards = () => {
   const cardData = homepageContent;
   return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      flexDirection="column"
-    >
+    <Container
+      maxWidth="xl"
+      sx={{ my: 10 }}
+      >
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        flexDirection="column"
+      >
       <Typography variant="h2">{cardData.infoCardsTitle} </Typography>
       <Typography variant="h5">{cardData.infoCardsDescription} </Typography>
       <Box display="flex" justifyContent="center" flexWrap="wrap">
@@ -24,7 +28,8 @@ const InfoCards = () => {
           />
         ))}
       </Box>
-    </Box>
+        </Box>
+    </Container>
   );
 };
 

@@ -10,6 +10,7 @@ const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
     <SlideWrapper>
       <Box
         sx={{
+          height: 100,
           display: "flex",
           alignItems: "center",
           gap: 2,
@@ -21,7 +22,7 @@ const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
           position: "relative",
           transition: "background-color 0.3s ease-in-out",
           "&:hover": {
-            backgroundColor: "background.paper",
+            backgroundColor: "background.lightAshGrey",
           },
         }}
         onMouseEnter={() => setSliderValue(100)}

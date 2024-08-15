@@ -17,6 +17,7 @@ const Footer: React.FC = () => {
       sx={{
         bgcolor: 'background.default',
         color: 'text.secondary',
+        // mt: 10,
         py: 3,
         borderTop: '1px solid',
         borderColor: 'divider',
@@ -25,48 +26,44 @@ const Footer: React.FC = () => {
       <Container maxWidth={false}>
         <Grid container spacing={2} justifyContent="space-between">
           <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="h6" color="text.primary" gutterBottom>
-              Tech Vaganza
+            <Typography variant="h4" color="text.primary" gutterBottom>
+              Techvaganza
             </Typography>
-            {/* Add your logo component or image here */}
+            {/* Add your logo components or image here */}
           </Grid>
           <Grid item xs={6} sm={3} md={2}>
             <Typography variant="subtitle1" fontWeight={550} color="text.primary" gutterBottom>
-              PRODUCT
+              Services
             </Typography>
-            <Link href="#" sx={{ ':hover' : { color: 'background.paper'}}} color="background.lightGrey" display="block">Features</Link>
-            <Link href="#" sx={{ ':hover' : { color: 'background.paper'}}} color="background.lightGrey" display="block">Integrations</Link>
-            <Link href="#" sx={{ ':hover' : { color: 'background.paper'}}} color="background.lightGrey" display="block">Pricing</Link>
-            <Link href="#" sx={{ ':hover' : { color: 'background.paper'}}} color="background.lightGrey" display="block">FAQ</Link>
+            <Link href="#" sx={{ ':hover' : { color: 'background.lightAshGrey'}}} color="#ffff" display="block">Web Development</Link>
+            <Link href="#" sx={{ ':hover' : { color: 'background.lightAshGrey'}}} color="#ffff" display="block">DevOps</Link>
+          </Grid>
+          <Grid item xs={6} sm={3} md={2}>
+            <Typography variant="subtitle1" fontWeight={550} color="text.primary" gutterBottom>
+              Products
+            </Typography>
+            <Link href="#" sx={{ ':hover' : { color: 'background.lightAshGrey'}}} color="#ffff" display="block">Customized POS</Link>
           </Grid>
           <Grid item xs={6} sm={3} md={2}>
             <Typography variant="subtitle1" fontWeight={550} color="text.primary" gutterBottom>
               COMPANY
             </Typography>
-            <Link href="#" sx={{ ':hover' : { color: 'background.paper'}}} color="background.lightGrey" display="block">About Us</Link>
-            <Link href="#" sx={{ ':hover' : { color: 'background.paper'}}} color="background.lightGrey" display="block">Careers</Link>
-            <Link href="#" sx={{ ':hover' : { color: 'background.paper'}}} color="background.lightGrey" display="block">Privacy Policy</Link>
-            <Link href="#" sx={{ ':hover' : { color: 'background.paper'}}} color="background.lightGrey" display="block">Terms of Service</Link>
-          </Grid>
-          <Grid item xs={6} sm={3} md={2}>
-            <Typography variant="subtitle1" fontWeight={550} color="text.primary" gutterBottom>
-              DEVELOPERS
-            </Typography>
-            <Link href="#" sx={{ ':hover' : { color: 'background.paper'}}} color="background.lightGrey" display="block">Public API</Link>
-            <Link href="#" sx={{ ':hover' : { color: 'background.paper'}}} color="background.lightGrey" display="block">Documentation</Link>
-            <Link href="#" sx={{ ':hover' : { color: 'background.paper'}}} color="background.lightGrey" display="block">Guides</Link>
+            <Link href="#" sx={{ ':hover' : { color: 'background.lightAshGrey'}}} color="#ffff" display="block">About Us</Link>
+            <Link href="#" sx={{ ':hover' : { color: 'background.lightAshGrey'}}} color="#ffff" display="block">Careers</Link>
+            <Link href="#" sx={{ ':hover' : { color: 'background.lightAshGrey'}}} color="#ffff" display="block">Privacy Policy</Link>
+            <Link href="#" sx={{ ':hover' : { color: 'background.lightAshGrey'}}} color="#ffff" display="block">Terms of Service</Link>
           </Grid>
           <Grid item xs={6} sm={3} md={2}>
             <Typography variant="subtitle1" fontWeight={550} color="text.primary" gutterBottom>
               SOCIAL MEDIA
             </Typography>
-            <IconButton aria-label="Facebook" sx={{ ':hover' : { color: 'background.lightGrey'}}} color="inherit" component="a" href={socialMediaLinks.facebook}>
+            <IconButton aria-label="Facebook" sx={{ ':hover' : { color: 'background.lightAshGrey'}}} color="inherit" component="a" href={socialMediaLinks.facebook}>
               <FaFacebook />
             </IconButton>
-            <IconButton aria-label="Twitter" sx={{ ':hover' : { color: 'background.lightGrey'}}} color="inherit" component="a" href={socialMediaLinks.twitter}>
+            <IconButton aria-label="Twitter" sx={{ ':hover' : { color: 'background.lightAshGrey'}}} color="inherit" component="a" href={socialMediaLinks.twitter}>
               <FaTwitter />
             </IconButton>
-            <IconButton aria-label="Instagram" sx={{ ':hover' : { color: 'background.lightGrey'}}} color="inherit" component="a" href={socialMediaLinks.instagram}>
+            <IconButton aria-label="Instagram" sx={{ ':hover' : { color: 'background.lightAshGrey'}}} color="inherit" component="a" href={socialMediaLinks.instagram}>
               <FaInstagram />
             </IconButton>
           </Grid>

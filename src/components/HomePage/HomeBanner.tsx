@@ -40,19 +40,10 @@ const HomeBanner = () => {
             color: "#fff",
             display: "block",
             mb: 2,
-            /*  '&::after': {
-              content: '""',
-              position: 'absolute',
-              left: 0,
-              bottom: '-10px',
-              width: '100%',
-              height: '4px',
-              backgroundColor: '#6A1B9A',
-            }, */
           }}
         >
           {staticText}
-          <FlipWords words={changingText} className="text-purple-400" />
+          <FlipWords words={changingText} className="text-[#F9A8D4]" />
         </Typography>
 
         <Typography
@@ -61,29 +52,30 @@ const HomeBanner = () => {
             position: "relative",
             display: "inline-block",
             fontWeight: "500",
-            color: "background.lightGrey",
+            color: "background.lightAshGrey",
             fontSize: "1.25rem",
           }}
         >
           {description}
         </Typography>
-        <Box mt={4}>
+        <Box>
           <Button
             variant="contained"
             color="primary"
             size="large"
-            sx={{ marginRight: 2 }}
+            sx={{ mt: 4, marginRight: 2 }}
           >
             Schedule Free Strategy Call
           </Button>
           <Button
             sx={{
+              mt: 4,
               position: "relative",
               display: "inline-block",
               color: "secondary.main",
               ":hover": {
                 bgcolor: "secondary.main",
-                color: "background.lightGrey",
+                color: "background.lightAshGrey",
               },
             }}
             variant="outlined"

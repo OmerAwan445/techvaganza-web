@@ -55,20 +55,12 @@ const homepageContent = {
     },
     {
       category: "EVENT",
-      title: "Shaping new frontiers in banking at TCF 2024",
+      title: "Shaping new frontiers in banking at TCF 2023",
       imageUrl: "/images/event cards/1.jpg",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       date: "14th to 16th May 2024",
       location: "Dublin",
-    },
-    {
-      category: "NEWSROOM",
-      title:
-        "Systems Limited graced with 3 accolades at IT & ITES Export Awards 2024 by PSEB",
-      imageUrl: "/images/event cards/1.jpg",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     {
       category: "NEWSROOM",
@@ -86,19 +78,11 @@ const homepageContent = {
     "Our approach allows us to deliver exceptional experiences that drive growth and success for all stakeholders. Let’s rise to new heights with the power of digital transformation.",
   stats: [
     {
-      number: "47+",
-      text: "Years of continual excellence",
-    },
-    {
-      number: "7000+",
-      text: "Change makers driving revolution",
-    },
-    {
-      number: "16+",
+      number: "5+",
       text: "Countries with our presence and clientele",
     },
     {
-      number: "618+",
+      number: "15+",
       text: "Active clients across the globe",
     },
   ],
@@ -120,7 +104,7 @@ const homepageContent = {
         "Digitize, automate and accelerate your business operations through digital transformation.",
       icon: GiCog,
     },
-    {
+    /* {
       title: "Generative AI",
       description:
         "Harness Generative AI and new technologies to innovate, automate, and stay ahead of the competition.",
@@ -155,7 +139,7 @@ const homepageContent = {
       description:
         "Improve your software's reliability with our comprehensive QA testing services.",
       icon: MdOutlineBugReport,
-    },
+    }, */
   ],
   // CTA Section Data
   CTASectionData: {

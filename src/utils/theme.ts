@@ -4,31 +4,30 @@ import { createTheme } from "@mui/material/styles";
 declare module "@mui/material/styles" {
   interface TypeBackground {
     black: string;
-    brownish: string;
-    lightBrown: string;
-    lightGrey: string;
+    peachDark: string;
+    peachLight: string;
+    lightAshGrey: string;
   }
 }
+
+/* Blue, Green Red. Pink */
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#0077b6", // Ocean Blue Main
-      light: "#00b4d8", // Ocean Blue Light
-      dark: "#03045e", // Ocean Blue Dark
+      main: "#1E3A8A", // Deep Blue
+      light: "#3B82F6", // Sky Blue
+      dark: "#1E40AF", // Navy Blue
     },
     secondary: {
-      main: "#52b788", // Parrot Green Main
-      light: "#95d5b2", // Parrot Green Light
-      dark: "#1b4332", // Parrot Green Dark
+      main: "#10B981", // Emerald Green
+      light: "#6EE7B7", // Mint Green
+      dark: "#065F46", // Forest Green
     },
     background: {
-      default: "#adb5bd", // Ash Grey Main
-      paper: "#dee2e6", // Ash Grey Light
-      lightGrey: "#ffff",
+      default: "#6C757D", // Darker Ash Grey Main
+      lightAshGrey: "#ADB5BD", // Ash Grey Light
       black: "#000000",
-      brownish: "#f08080", // Peach Dark
-      lightBrown: "#ffd6e7", // Peach Light
     },
     text: {
       primary: "#222831", // Dark Charcoal for primary text

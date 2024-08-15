@@ -1,11 +1,14 @@
 "use client";
 import homepageContent from "@/content/homepage";
-import { Box, Divider, Grid, Link, Typography } from "@mui/material";
+import { Box, Container, Divider, Grid, Link, Typography, useMediaQuery } from "@mui/material";
 import SlideWrapper from "@/components/Wrapper/SlideWrapper";
+import theme from "@/utils/theme";
 
 const StatsSection = () => {
+  const isAboveMd = useMediaQuery(theme.breakpoints.up('md'));
+
   return (
-    <Box sx={{ padding: 20 }}>
+    <Container maxWidth="md" className={isAboveMd ? "" : '!px-6 md:!px-8'} sx={{ my: 15  }}>
       <SlideWrapper>
         <Grid container spacing={6} alignItems="center">
           <Grid item xs={12} md={6}>
@@ -53,12 +56,12 @@ const StatsSection = () => {
           </Grid>
         </Grid>
       </SlideWrapper>
-      <Box sx={{ textAlign: "center", marginTop: 8, padding: 8 }}>
+      <Container maxWidth={`${isAboveMd ? 'md': 'sm'}`} className={isAboveMd ? 'addmd': 'addxs'} sx={{ textAlign: "center", my: 8 }}>
         <Typography variant="h3" color="text.primary">
           {homepageContent.statsContentBottomHeading}
         </Typography>
-      </Box>
-    </Box>
+      </Container>
+    </Container>
   );
 };
 

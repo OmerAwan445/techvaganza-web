@@ -13,7 +13,7 @@ const InfoCard = ({ icon: Icon, title, description }: InfoCardProps) => {
         maxWidth: 345,
         margin: 2,
         padding: 5,
-        backgroundColor: "background.default",
+        backgroundColor: "secondary.dark",
       }}
     >
       <CardContent>
