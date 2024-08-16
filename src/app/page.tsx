@@ -4,17 +4,18 @@ import HomeBanner from "@/components/HomePage/HomeBanner";
 import InfoCards from "@/components/HomePage/InfoCards/InfoCards";
 import FeaturesInsight from "@/components/HomePage/Insights/Insights";
 import ServicesSection from "@/components/HomePage/ServicesSection/ServicesSection";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import StatsSection from "../components/HomePage/StatsContent/StatsSection";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 export default function Home() {
   return (
     <Box sx={{ overflow: "hidden" }}>
       <HomeBanner />
-      <InfoCards />
+      {/* <InfoCards /> */}
       <FeaturesInsight />
-      <StatsSection />
       {/* <ServicesSection /> */}
+      <StatsSection />
       <GifSection />
       {/* <CTASection /> */}
     </Box>

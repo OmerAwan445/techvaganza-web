@@ -14,16 +14,16 @@ const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
           display: "flex",
           alignItems: "center",
           gap: 2,
-          backgroundColor: "background.default",
+          backgroundColor: "primary.light",
           padding: 4,
           borderRadius: 0,
           borderBottom: "2px solid",
           borderColor: "divider",
           position: "relative",
           transition: "background-color 0.3s ease-in-out",
-          "&:hover": {
-            backgroundColor: "background.lightAshGrey",
-          },
+          // "&:hover": {
+          //   backgroundColor: "primary.light",
+          // },
         }}
         onMouseEnter={() => setSliderValue(100)}
         onMouseLeave={() => setSliderValue(0)}
@@ -61,7 +61,7 @@ const ServiceCard = ({ title, description, icon: Icon }: ServiceCardProps) => {
             value={sliderValue}
             sx={{
               width: "100%",
-              color: "primary.main",
+              color: "white",
               "& .MuiSlider-thumb": {
                 display: "none",
               },

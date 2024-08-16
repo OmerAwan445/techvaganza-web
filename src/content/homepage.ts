@@ -1,12 +1,8 @@
-import { FaPencilRuler, FaLightbulb, FaTools } from "react-icons/fa";
 import {
-  AiOutlineCloud,
-  AiOutlineGlobal,
-  AiOutlineMobile,
+  AiOutlineGlobal
 } from "react-icons/ai";
-import { BiBrain } from "react-icons/bi";
-import { GiCog, GiNetworkBars } from "react-icons/gi";
-import { MdOutlineBugReport, MdOutlineSecurity } from "react-icons/md";
+import { FaLightbulb, FaPencilRuler, FaTools } from "react-icons/fa";
+import { GiCog } from "react-icons/gi";
 
 const homepageContent = {
   // Banner
@@ -90,7 +86,6 @@ const homepageContent = {
     "We rethink business growth for you through our collective experience with strategic partner ecosystem.",
 
   // Services Data
-
   servicesData: [
     {
       title: "Web Development",

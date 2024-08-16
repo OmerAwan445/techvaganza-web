@@ -1,8 +1,8 @@
 "use client";
-import homepageContent from "@/content/homepage";
-import { Box, Container, Divider, Grid, Link, Typography, useMediaQuery } from "@mui/material";
 import SlideWrapper from "@/components/Wrapper/SlideWrapper";
+import homepageContent from "@/content/homepage";
 import theme from "@/utils/theme";
+import { Container, Divider, Grid, Link, Typography, useMediaQuery } from "@mui/material";
 
 const StatsSection = () => {
   const isAboveMd = useMediaQuery(theme.breakpoints.up('md'));
@@ -15,11 +15,11 @@ const StatsSection = () => {
             <Typography variant="h4" color="text.primary" gutterBottom>
               {homepageContent.statsContentMainTitle}
             </Typography>
-            <Typography variant="body1" color="text.secondary" paragraph>
+            <Typography variant="body1" color="background.lightAshGrey" paragraph>
               {homepageContent.statsContentDescription}
             </Typography>
             <Link
-              href="#"
+              href="/about-us"
               color="primary"
               underline="hover"
               sx={{ fontSize: "1rem", fontWeight: "bold" }}
@@ -44,10 +44,10 @@ const StatsSection = () => {
             <Grid container spacing={4} sx={{ marginLeft: "20px" }}>
               {homepageContent.stats.map((stat, index) => (
                 <Grid item xs={6} key={index}>
-                  <Typography variant="h3" color="text.primary">
+                  <Typography variant="h3" fontWeight={600} color="secondary.main">
                     {stat.number}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="background.default">
                     {stat.text}
                   </Typography>
                 </Grid>
@@ -56,7 +56,7 @@ const StatsSection = () => {
           </Grid>
         </Grid>
       </SlideWrapper>
-      <Container maxWidth={`${isAboveMd ? 'md': 'sm'}`} className={isAboveMd ? 'addmd': 'addxs'} sx={{ textAlign: "center", my: 8 }}>
+      <Container maxWidth={`${isAboveMd ? 'md': 'sm'}`} sx={{ textAlign: "center", my: 8 }}>
         <Typography variant="h3" color="text.primary">
           {homepageContent.statsContentBottomHeading}
         </Typography>

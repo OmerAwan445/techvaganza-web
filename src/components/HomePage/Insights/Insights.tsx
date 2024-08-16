@@ -7,16 +7,19 @@ import homepageContent from "@/content/homepage";
 import { SwiperSlide } from "swiper/react";
 import FreeModeSlider from "@/components/commons/Sliders/FreeModeSlider";
 import SlideWrapper from "@/components/Wrapper/SlideWrapper";
+
 const Insights = () => {
   const insights = homepageContent.insights;
 
   return (
-
-    <Container sx={{ my: 5 }}>
+    <Box sx={{ mb:3, py: 7,  background: 'linear-gradient(180deg, #2C2F3A 0%, #3C4050 100%)',
+    }}>
+    <Container >
       <SlideWrapper>
         <Typography
           variant="h3"
           align="center"
+          color="white"
           sx={{ fontWeight: 400, marginBottom: 3 }}
         >
           Services & Products
@@ -44,6 +47,7 @@ const Insights = () => {
 
       </SlideWrapper>
     </Container>
+          </Box>
   );
 };
 
