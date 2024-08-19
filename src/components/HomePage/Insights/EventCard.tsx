@@ -24,6 +24,7 @@ const EventCard = ({
         position: "relative",
         overflow: "hidden",
         borderRadius: 3,
+        backgroundColor: "#000000",
         transition: "transform 0.4s ease-in-out",
         "&:hover": { transform: "scale(1.05)" },
       }}

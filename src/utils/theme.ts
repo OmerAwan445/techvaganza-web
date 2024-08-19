@@ -15,12 +15,12 @@ declare module "@mui/material/styles" {
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#1E3A8A", // Deep Blue
+      main: "#374785", // Deep Blue
       light: "#3B82F6", // Sky Blue
       dark: "#1E40AF", // Navy Blue
     },
     secondary: {
-      main: "#10B981", // Emerald Green
+      main: "#86c232", // Emerald Green
       light: "#6EE7B7", // Mint Green
       dark: "#065F46", // Forest Green
     },

@@ -56,7 +56,7 @@ const StatsSection = () => {
                 width: "2px",
               }}
             />
-            <Grid container spacing={4} sx={{ marginLeft: "0.5em" }}>
+            <Grid container spacing={4} sx={{}}>
               {homepageContent.stats.map((stat, index) => (
                 <Grid item xs={6} key={index}>
                   <Typography

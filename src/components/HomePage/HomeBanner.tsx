@@ -17,7 +17,7 @@ const HomeBanner = () => {
         justifyContent: "center",
         textAlign: "center",
         position: "relative",
-        width: "99vw",
+        width: "100vw",
       }}
     >
       <Box
@@ -43,7 +43,7 @@ const HomeBanner = () => {
           }}
         >
           {staticText}
-          <FlipWords words={changingText} className="text-[#F9A8D4]" />
+          <FlipWords words={changingText} className="text-[#66fcf1]" />
         </Typography>
 
         <Typography

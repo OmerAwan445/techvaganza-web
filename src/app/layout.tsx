@@ -6,7 +6,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavbarLayout from "@/components/Header/NavbarLayout";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-[#fefefe]">
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <NavbarLayout>{children}</NavbarLayout>
