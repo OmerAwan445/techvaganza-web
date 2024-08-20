@@ -26,7 +26,7 @@ const ServiceCard = ({
         backgroundColor: "#1c1c1e",
         transition: "transform 0.4s ease-in-out",
         "&:hover": {
-          transform: "scale(1.05)",
+          transform: "scale(1.1)",
           boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)",
         },
       }}
@@ -42,6 +42,8 @@ const ServiceCard = ({
             filter: hover ? "blur(8px) brightness(70%)" : "brightness(90%)",
             transition: "filter 0.3s ease-in-out, transform 0.3s ease-in-out",
             transform: hover ? "scale(1.1)" : "scale(1)",
+            height: 450,
+            objectFit: "cover",
           }}
         />
         <Box
@@ -83,6 +85,7 @@ const ServiceCard = ({
               mb: 1,
               fontWeight: "bold",
               textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
+              textAlign: "center",
             }}
           >
             {title}
