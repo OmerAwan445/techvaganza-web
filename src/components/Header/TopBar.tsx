@@ -26,14 +26,13 @@ const TopBar = () => {
         sx={{
           height: "100%",
           display: "flex",
+          position: "relative",
           justifyContent: "space-between",
           alignItems: "center",
         }}
         maxWidth="xl"
       >
-        <Typography variant="body1" color="inherit">
-          {title}
-        </Typography>
+        <p>{" "}</p>
         <Box
           sx={{
             flexGrow: 0.4,

@@ -2,13 +2,9 @@ import theme from "@/utils/theme";
 import { ThemeProvider } from "@mui/material";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { poppins } from "@/utils/fontfamily";
 import "./globals.css";
 import NavbarLayout from "@/components/Header/NavbarLayout";
-
-const inter = Inter({
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-[#fefefe]">
+      <body className={poppins.className}>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <NavbarLayout>{children}</NavbarLayout>

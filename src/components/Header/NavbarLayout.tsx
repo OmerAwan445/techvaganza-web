@@ -6,13 +6,15 @@ import Footer from "../Footer/Footer";
 
 const NavbarLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Box className="flex flex-col min-h-screen">
-      <AppBar sx={{ bgcolor: "white"}} position="sticky">
+    <Box className="flex flex-col min-h-screen" fontFamily={"inherit"}>
+      <AppBar sx={{ bgcolor: "white" }} position="sticky">
         <TopBar />
         <CustomNavbar />
       </AppBar>
       <Box className="flex-grow flex">{children}</Box>
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </Box>
   );
 };

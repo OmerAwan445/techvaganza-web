@@ -19,13 +19,12 @@ const Footer: React.FC = () => {
       <Container maxWidth={false}>
         <Grid container spacing={2} justifyContent="space-between">
           <Grid item xs={12} sm={12} md={3} alignItems={"center"} justifyItems={"center"} sx={{ my: { 'sm': 1, 'md': 0 } }} >
-          <h1 className="relative !leading-snug z-10 text-4xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-left font-sans font-bold">
+          <h1 className="relative !leading-snug z-10 text-4xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-left font-bold">
           {title}
         </h1>
         {description && <Typography
           className="!tracking-wide !text-sm !mt-1 !leading-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 via-neutral-100 to-neutral-200"
           fontWeight="500"
-          fontFamily="sans-serif"
         >
           {description}
         </Typography>}
@@ -37,7 +36,7 @@ const Footer: React.FC = () => {
               {column.title}
             </Typography>
             {column.links.map((link, index) =>
-              <Link key={link.name} href={link.link} sx={{ ':hover' : { color: 'white'}}} color="background.lightAshGrey" display="block">{link.name}</Link>
+              <Link underline={"none"}  key={link.name} href={link.link} sx={{ ':hover' : { color: 'text.secondary'}}} color="background.light" display="block">{link.name}</Link>
             )}
           </Grid>
           )}
@@ -47,7 +46,7 @@ const Footer: React.FC = () => {
             </Typography>
 
            {socials.map(({name, link, SocialIcon}) =>
-           <IconButton key={name} aria-label={name} sx={{ color: "background.lightAshGrey", ':hover' : { color: 'white'}}} component="a" href={link}>
+           <IconButton key={name} aria-label={name} sx={{ color: "text.primary", ':hover' : { color: 'white'}}} component="a" href={link}>
               <SocialIcon />
             </IconButton>
            ) 
@@ -55,7 +54,7 @@ const Footer: React.FC = () => {
           </Grid>
         </Grid>
         <Typography variant="body2" color="text.secondary" align="center" sx={{ pt: 4 }}>
-          © 2024 Company Co. All rights reserved.
+          © 2024 Techvaganza. All rights reserved.
         </Typography>
       </Container>
     </Box>
