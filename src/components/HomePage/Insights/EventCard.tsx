@@ -1,32 +1,34 @@
 "use client";
 
-import { Box, Card, CardMedia, Slide, Typography } from "@mui/material";
+import { Box, Card, CardMedia, Typography } from "@mui/material";
 import { useState } from "react";
-import { BiCalendar } from "react-icons/bi";
-import { GoLocation } from "react-icons/go";
 
-const EventCard = ({
-  category,
+const ServiceCard = ({
   title,
-  date,
-  location,
   description,
   imageUrl,
-}: EventCardProps) => {
+}: {
+  title: string;
+  description: string;
+  imageUrl: string;
+}) => {
   const [hover, setHover] = useState(false);
 
   return (
     <Card
       sx={{
         maxWidth: 350,
-        minHeight: 300,
+        minHeight: 350,
         maxHeight: 500,
         position: "relative",
         overflow: "hidden",
-        borderRadius: 3,
-        backgroundColor: "#000000",
+        borderRadius: 4,
+        backgroundColor: "#1c1c1e",
         transition: "transform 0.4s ease-in-out",
-        "&:hover": { transform: "scale(1.05)" },
+        "&:hover": {
+          transform: "scale(1.05)",
+          boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)",
+        },
       }}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
@@ -37,88 +39,70 @@ const EventCard = ({
           image={imageUrl}
           alt={title}
           sx={{
-            filter: "brightness(50%)",
-            transition: "filter 0.3s ease-in-out",
+            filter: hover ? "blur(8px) brightness(70%)" : "brightness(90%)",
+            transition: "filter 0.3s ease-in-out, transform 0.3s ease-in-out",
+            transform: hover ? "scale(1.1)" : "scale(1)",
           }}
         />
         <Box
           sx={{
-            overflowY: "scroll",
             position: "absolute",
             top: 0,
             left: 0,
             right: 0,
+            bottom: 0,
+            background: hover
+              ? "transparent"
+              : "linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7))",
+            transition: "background 0.3s ease-in-out",
+            zIndex: 1,
+          }}
+        />
+        <Box
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-end",
             color: "#ffffff",
-            textAlign: "center",
-            p: 2,
+            p: 3,
+            zIndex: 2,
+            transition: "opacity 0.3s ease-in-out",
+            opacity: hover ? 0.9 : 1,
           }}
         >
           <Typography
-            variant="subtitle1"
+            variant="h5"
             component="div"
-            sx={{ color: "#a0a0a0", mb: 1, textAlign: "left" }}
-          >
-            {category}
-          </Typography>
-          <Typography
-            variant="h6"
-            align="left"
-            className="text-base line-clamp-2"
-            component="div"
+            sx={{
+              color: "#ffffff",
+              mb: 1,
+              fontWeight: "bold",
+              textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
+            }}
           >
             {title}
           </Typography>
-        </Box>
-        <Slide
-          timeout={400}
-          direction="left"
-          in={hover}
-          mountOnEnter
-          unmountOnExit
-        >
-          <Box
+          <Typography
+            variant="body2"
+            component="div"
             sx={{
-              overflowY: "scroll",
-              position: "absolute",
-              top: 100,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              display: "flex",
-              flexDirection: "column",
-              color: "#ffffff",
-              p: 2,
-              pb: 3,
-              pt: 0,
               mt: 2,
+              opacity: hover ? 1 : 0,
+              transition: "opacity 0.3s ease-in-out",
+              textAlign: "center",
             }}
           >
-            {date && (
-              <Typography variant="body2" component="div" sx={{ mt: 2 }}>
-                <BiCalendar
-                  fontSize={18}
-                  className="inline-block align-middle mr-1"
-                />
-                {date}
-              </Typography>
-            )}
-            {location && (
-              <Typography variant="body2" component="div" sx={{ mt: 1 }}>
-                <GoLocation
-                  fontSize={18}
-                  className="inline-block align-middle mr-1"
-                />
-                {location}
-              </Typography>
-            )}
-            <Typography variant="body2" component="div" sx={{ mt: 2 }}>
-              {description}
-            </Typography>
-          </Box>
-        </Slide>
+            {description}
+          </Typography>
+        </Box>
       </Box>
     </Card>
   );
 };
 
-export default EventCard;
+export default ServiceCard;

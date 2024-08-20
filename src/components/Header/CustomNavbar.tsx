@@ -12,6 +12,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import headerContent from "@/content/header";
+import Image from "next/image";
+import LOGO from "@/assets/Logo/Techvaganza_Site_Logo.jpeg"
 
 
 function CustomNavbar() {
@@ -86,25 +88,7 @@ function CustomNavbar() {
 
      {/* Logo */}
           <Box sx={{ flexGrow: 1, alignItems: "center" }}>
-            <svg
-              version="1.1"
-              className="techco_logo_1"
-              width="168px"
-              height="33px"
-              xmlns="http://www.w3.org/2000/svg"
-              x="0"
-              y="0"
-              viewBox="0 0 133.9 26"
-              xmlSpace="preserve"
-            >
-              <style>
-                {`
-        .st0 { fill: #2b2d32; }
-        .st1 { fill: #1eb9d5; }
-      `}
-              </style>
-              <g id="Logo-_x2F_-Techco-_x2F_-Dark-1"><path id="Fill-1" className="st0" d="M27.9 7.4h6.9l-4.4 4.4h-2.5v7.6c0 1.6.7 2.1 2.1 2.1.6 0 1.2-.1 1.5-.1v4.1c-.4.2-1.3.4-2.8.4-3.5 0-5.7-2.1-5.7-5.6V1.2h4.9v6.2z"></path><path id="Fill-3" className="st0" d="M45.2 14.2c-.1-1.8-1.2-3.6-4-3.6-2.5 0-3.9 1.9-4 3.6h8zm4.6 6c-.9 3.1-3.8 5.8-8.2 5.8-5 0-9.3-3.6-9.3-9.7 0-5.8 4.3-9.6 8.9-9.6 5.6 0 8.9 3.6 8.9 9.4 0 .7-.1 1.4-.1 1.5H37c.1 2.4 2.1 4.1 4.6 4.1 2.3 0 3.5-1.1 4.1-2.8l4.1 1.3z"></path><path id="Fill-5" className="st0" d="M56.2 16.3c0 3.3 2.1 5.1 4.6 5.1s3.7-1.7 4.2-3.1l4.3 1.4c-.8 3-3.6 6.1-8.5 6.1-5.3 0-9.5-4.1-9.5-9.6 0-5.6 4.1-9.6 9.4-9.6 4.9 0 7.7 3.1 8.5 6.1l-4.4 1.5c-.4-1.5-1.6-3.1-4-3.1-2.5.1-4.6 1.9-4.6 5.2"></path><path id="Fill-7" className="st0" d="M75.6 26h-4.9V5l4.9-5-.1 9.3c1.2-1.4 3.2-2 4.9-2 4.6 0 6.7 3.2 6.7 7.2V26h-4.9V15.3c0-2-1-3.6-3.3-3.6-2.1 0-3.3 1.6-3.4 3.5V26h.1z"></path><path id="Fill-9" className="st1" d="M92.3 19.2c1.9 0 3.4 1.5 3.4 3.4 0 1.8-1.5 3.4-3.4 3.4-1.8 0-3.3-1.5-3.3-3.4s1.5-3.4 3.3-3.4"></path><path id="Fill-11" className="st0" d="M101.3 16.3c0 3.3 2.1 5.1 4.6 5.1s3.7-1.7 4.2-3.1l4.3 1.4c-.8 3-3.6 6.1-8.5 6.1-5.3 0-9.5-4.1-9.5-9.6 0-5.6 4.1-9.6 9.4-9.6 4.9 0 7.7 3.1 8.5 6.1l-4.4 1.5c-.4-1.5-1.6-3.1-4-3.1-2.5.1-4.6 1.9-4.6 5.2"></path><path id="Fill-13" className="st0" d="M129 16.3c0-3.4-2.2-5.2-4.6-5.2s-4.6 1.7-4.6 5.2c0 3.4 2.2 5.2 4.6 5.2s4.6-1.8 4.6-5.2m4.9 0c0 5.6-4.1 9.6-9.5 9.6s-9.5-4.1-9.5-9.6c0-5.6 4.1-9.6 9.5-9.6s9.5 4 9.5 9.6"></path><path id="Fill-15" className="st1" d="M4.9 1.2L0 6.1h13.3v13.4l4.9-4.9V1.2z"></path></g>
-            </svg>
+            <Image src={LOGO} alt="Techvaganza Logo" width={200} height={250} />
           </Box>
 
           <Box sx={{ flexGrow: 0.4, alignItems: "center", display: { xs: "none", md: "flex" } }}>

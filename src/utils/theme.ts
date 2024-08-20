@@ -1,4 +1,5 @@
 "use client";
+import { poppins } from "@/utils/fontfamily";
 import { createTheme } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
@@ -6,7 +7,8 @@ declare module "@mui/material/styles" {
     black: string;
     peachDark: string;
     peachLight: string;
-    lightAshGrey: string;
+    light: string;
+    dark: string
   }
 }
 
@@ -15,26 +17,27 @@ declare module "@mui/material/styles" {
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#374785", // Deep Blue
-      light: "#3B82F6", // Sky Blue
-      dark: "#1E40AF", // Navy Blue
+      main: '#5680E9', // Deep Blue
+      light: '#8DA6F2', // Lighter version of Deep Blue
+      dark: '#2C59B2', // Darker version of Deep Blue
     },
     secondary: {
-      main: "#86c232", // Emerald Green
-      light: "#6EE7B7", // Mint Green
-      dark: "#065F46", // Forest Green
+      main: '#8860D0', // Vibrant Purple
+      light: '#B18AE7', // Lighter version of Purple
+      dark: '#5D3A9E', // Darker version of Purple
     },
     background: {
-      default: "#6C757D", // Darker Ash Grey Main
-      lightAshGrey: "#ADB5BD", // Ash Grey Light
-      black: "#000000",
+      default: '#5AB9EA', // Vibrant Light Blue
+      light: '#84CEEB', // Lighter Vibrant Blue
+      dark: '#3A83A8', // Darker version of Light Blue
     },
     text: {
-      primary: "#222831", // Dark Charcoal for primary text
-      secondary: "#EEEEEE", // Light Grey for secondary text
+      primary: '#c3c1e4', // Soft Blue-Gray for primary text
+      secondary: '#EEEEEE', // Light Gray for secondary text
     },
   },
   typography: {
+    fontFamily: poppins.style.fontFamily,
     h1: {
       fontSize: "6rem", // Default font size for h1
       "@media (max-width:1200px)": {

@@ -23,12 +23,12 @@ const StatsSection = () => {
       <SlideWrapper>
         <Grid container spacing={6} alignItems="center">
           <Grid item xs={12} md={6}>
-            <Typography variant="h4" color="text.primary" gutterBottom>
+            <Typography variant="h4" color="primary.dark" gutterBottom>
               {homepageContent.statsContentMainTitle}
             </Typography>
             <Typography
               variant="body1"
-              color="background.lightAshGrey"
+              color="text.primary"
               paragraph
             >
               {homepageContent.statsContentDescription}
@@ -66,7 +66,7 @@ const StatsSection = () => {
                   >
                     {stat.number}
                   </Typography>
-                  <Typography variant="body2" color="background.default">
+                  <Typography variant="body2" color="text.primary">
                     {stat.text}
                   </Typography>
                 </Grid>
@@ -79,7 +79,7 @@ const StatsSection = () => {
         maxWidth={`${isAboveMd ? "md" : "sm"}`}
         sx={{ textAlign: "center", my: 8 }}
       >
-        <Typography variant="h3" color="text.primary">
+        <Typography variant="h3" fontWeight={400} color="primary.dark">
           {homepageContent.statsContentBottomHeading}
         </Typography>
       </Container>

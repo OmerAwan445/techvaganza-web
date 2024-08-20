@@ -19,6 +19,7 @@ const config = {
     },
     extend: {
       colors: {
+        "vibrant-text": '#8860D0',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

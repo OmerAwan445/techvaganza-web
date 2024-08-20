@@ -41,31 +41,23 @@ const homepageContent = {
   // Feature Insights
   insights: [
     {
-      category: "EVENT",
-      title: "Shaping new frontiers in banking at TCF 2024",
+      title: "Web Development",
       imageUrl: "/images/event cards/1.jpg",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      date: "14th to 16th May 2024",
-      location: "Dublin",
+        "We offer top-notch web development services, building responsive and scalable web applications using the latest technologies to meet your business needs.",
     },
     {
-      category: "EVENT",
-      title: "Shaping new frontiers in banking at TCF 2023",
+      title: "DevOps Solutions",
       imageUrl: "/images/event cards/1.jpg",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      date: "14th to 16th May 2024",
-      location: "Dublin",
+        "Our DevOps services streamline your software development process, integrating development and operations teams to deliver faster and more reliable software solutions.",
     },
     {
-      category: "NEWSROOM",
-      title:
-        "Systems Limited graced with 3 accolades at IT & ITES Export Awards 2024 by PSEB",
+      title: "Customized POS System",
       imageUrl: "/images/event cards/1.jpg",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    },
+        "Our customized Point of Sale (POS) system is tailored to your business needs, providing seamless integration with your existing systems and enhancing your operational efficiency.",
+    }
   ],
 
   // StatsContent

@@ -43,7 +43,7 @@ const HomeBanner = () => {
           }}
         >
           {staticText}
-          <FlipWords words={changingText} className="text-[#66fcf1]" />
+          <FlipWords words={changingText} className="text-vibrant-text" />
         </Typography>
 
         <Typography
@@ -52,7 +52,7 @@ const HomeBanner = () => {
             position: "relative",
             display: "inline-block",
             fontWeight: "500",
-            color: "background.lightAshGrey",
+            color: "background.light",
             fontSize: "1.25rem",
           }}
         >
@@ -61,7 +61,7 @@ const HomeBanner = () => {
         <Box>
           <Button
             variant="contained"
-            color="primary"
+            color="secondary"
             size="large"
             sx={{ mt: 4, marginRight: 2 }}
           >
@@ -72,14 +72,14 @@ const HomeBanner = () => {
               mt: 4,
               position: "relative",
               display: "inline-block",
-              color: "secondary.main",
+              borderColor: "primary.main",
               ":hover": {
-                bgcolor: "secondary.main",
-                color: "background.lightAshGrey",
+                bgcolor: "primary.main",
+                color: "white",
               },
             }}
             variant="outlined"
-            color="secondary"
+            color="primary"
             size="large"
           >
             See our Work

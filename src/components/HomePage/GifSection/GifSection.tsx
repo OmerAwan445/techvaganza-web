@@ -38,7 +38,7 @@ const GifSection = () => (
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: "rgba(255, 255, 255, 0.5)",
+        background: "rgba(0, 0, 0, 0.3)", 
         zIndex: 2,
       }}
     />
@@ -53,10 +53,10 @@ const GifSection = () => (
         zIndex: 3,
       }}
     >
-      <Typography variant="h2" sx={{ color: "primary.main", mb: 2 }}>
+      <Typography variant="h2" fontWeight={400} sx={{ color: "background.default", mb: 2 }}>
         Your next starts right here
       </Typography>
-      <Button variant="contained" color="primary" size="large">
+      <Button variant="contained" color="secondary" sx={{ bgColor: "background.light" }} size="large">
         JOIN US
       </Button>
     </Box>
