@@ -1,6 +1,4 @@
-import {
-  AiOutlineGlobal
-} from "react-icons/ai";
+import { AiOutlineGlobal } from "react-icons/ai";
 import { FaLightbulb, FaPencilRuler, FaTools } from "react-icons/fa";
 import { GiCog } from "react-icons/gi";
 
@@ -42,22 +40,22 @@ const homepageContent = {
   insights: [
     {
       title: "Web Development",
-      imageUrl: "/images/event cards/1.jpg",
+      imageUrl: "/images/event cards/EventCard-1.jpg",
       description:
-        "We offer top-notch web development services, building responsive and scalable web applications using the latest technologies to meet your business needs.",
+        "We offer top-notch web development services, building responsive and scalable web applications using the latest technologies to meet your specific business needs and objectives.",
     },
     {
       title: "DevOps Solutions",
-      imageUrl: "/images/event cards/1.jpg",
+      imageUrl: "/images/event cards/EventCard-2.jpg",
       description:
         "Our DevOps services streamline your software development process, integrating development and operations teams to deliver faster and more reliable software solutions.",
     },
     {
       title: "Customized POS System",
-      imageUrl: "/images/event cards/1.jpg",
+      imageUrl: "/images/event cards/EventCard-3.jpg",
       description:
         "Our customized Point of Sale (POS) system is tailored to your business needs, providing seamless integration with your existing systems and enhancing your operational efficiency.",
-    }
+    },
   ],
 
   // StatsContent
