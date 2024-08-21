@@ -1,27 +1,22 @@
-import React from 'react';
+import contactUsContent from '@/content/contactUsPage';
 import {
   Box,
   Grid,
-  Typography,
-  TextField,
-  Button,
-  Container,
+  Typography
 } from '@mui/material';
-import contactUsContent from '@/content/contactUsPage';
+import ContactUsForm from './ContactUsForm';
 
 const ContactUs = () => {
 
-    const { formTitle, address, formDesc, getinTouchDesc, email, phone} = contactUsContent;
+    const { address, getinTouchDesc, email, phone} = contactUsContent;
 
   return (
-    <Container>
-      <Box sx={{ p: 5, bgcolor: 'background.paper', borderRadius: 2 }}>
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
+        <Grid maxWidth={"xl"} container spacing={2} justifyContent={"center"} py={8} px={0} mx={"auto"}>
+          <Grid item xs={12} md={5} lg={6}>
             <Typography variant="h4" gutterBottom>
               Get in Touch
             </Typography>
-            <Typography variant="body1" paragraph>
+            <Typography variant="body1" className='' paragraph>
              {getinTouchDesc}
             </Typography>
             <Box mt={3}>
@@ -49,78 +44,11 @@ const ContactUs = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <Box component="form" noValidate autoComplete="off">
-              <Typography variant="h5" gutterBottom>
-                We would like to hear from you
-              </Typography>
-              <Typography variant="body2" color="text.primary" paragraph>
-                {formDesc}
-              </Typography>
-              <Grid container spacing={2}>
-                <Grid item xs={6}>
-                  <TextField
-                    required
-                    fullWidth
-                    label="Name"
-                    variant="outlined"
-                  />
-                </Grid>
-                <Grid item xs={6}>
-                  <TextField
-                    required
-                    fullWidth
-                    label="Surname"
-                    variant="outlined"
-                  />
-                </Grid>
-                <Grid item xs={6}>
-                  <TextField
-                    required
-                    fullWidth
-                    label="Email"
-                    variant="outlined"
-                    type="email"
-                  />
-                </Grid>
-                <Grid item xs={6}>
-                  <TextField
-                    required
-                    fullWidth
-                    label="Phone Number"
-                    variant="outlined"
-                    type="tel"
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    required
-                    fullWidth
-                    label="Service Needed"
-                    variant="outlined"
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    required
-                    fullWidth
-                    label="Message"
-                    variant="outlined"
-                    multiline
-                    rows={4}
-                  />
-                </Grid>
-              </Grid>
-              <Box mt={3}>
-                <Button variant="contained" color="primary" size="large">
-                  Register
-                </Button>
-              </Box>
-            </Box>
+
+          <Grid item xs={12} md={7} lg={6} sx={{mt: { 'xs': 5, 'md': 0 }, p: {'xs': "0 !important", 'sm': "2 !important" }}}>
+          <ContactUsForm />
           </Grid>
         </Grid>
-      </Box>
-    </Container>
   );
 };
 

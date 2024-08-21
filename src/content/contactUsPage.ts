@@ -7,6 +7,17 @@ const contactUsContent = {
     address: 'Nawabpur Road opposite dogar plaza Multan',
     formTitle: 'We would like to hear from you',
     formDesc: "Fill in the form and we'll get back to you",
+    servicesOffered: [
+     {
+       value: "web-development",
+       text: "Web Development"
+    }, 
+    {
+        value: "depos",
+       text: "DevOps"
+    } 
+],
+        
 
 };
 export default contactUsContent;

@@ -113,13 +113,13 @@ const theme = createTheme({
     body1: {
       fontSize: "1rem", // Default font size for body1 (paragraphs)
       "@media (max-width:1200px)": {
-        fontSize: "0.9375rem", // Adjust font size for large screens
+        fontSize: "0.8375rem", // Adjust font size for large screens
       },
       "@media (max-width:900px)": {
-        fontSize: "0.875rem", // Adjust font size for medium screens
+        fontSize: "0.8rem", // Adjust font size for medium screens
       },
       "@media (max-width:600px)": {
-        fontSize: "0.8125rem", // Adjust font size for small screens
+        fontSize: "0.7125rem", // Adjust font size for small screens
       },
     },
   },
