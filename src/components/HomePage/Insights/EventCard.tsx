@@ -18,8 +18,8 @@ const ServiceCard = ({
     <Card
       sx={{
         maxWidth: 350,
-        minHeight: 350,
-        maxHeight: 500,
+        minHeight: 500,
+        maxHeight: 650,
         position: "relative",
         overflow: "hidden",
         borderRadius: 4,
@@ -42,7 +42,7 @@ const ServiceCard = ({
             filter: hover ? "blur(8px) brightness(70%)" : "brightness(90%)",
             transition: "filter 0.3s ease-in-out, transform 0.3s ease-in-out",
             transform: hover ? "scale(1.1)" : "scale(1)",
-            height: 450,
+            height: 500,
             objectFit: "cover",
           }}
         />
