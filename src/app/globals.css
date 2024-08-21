@@ -80,7 +80,8 @@
 }
 
 /* Slider css */
-@media (max-width: 639.98px) {
+/* @media (max-width: 639.98px) { */
+@media (max-width: 767.98px) {
   .custom-Slider .swiper-slide {
     width: auto !important;
   }

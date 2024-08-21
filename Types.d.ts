@@ -11,3 +11,12 @@ type ServiceCardProps = {
   description: string;
   icon: React.ElementType;
 };
+
+type ContactusFormData = {
+  first_name: string;
+  last_name: string;
+  phone: string;
+  email: string;
+  service_needed: string;
+  message: string;
+}

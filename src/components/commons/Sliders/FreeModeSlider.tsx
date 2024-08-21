@@ -27,17 +27,14 @@ const FreeModeSlider: FC<SliderProps> = ({
         modules={[FreeMode]}
         breakpoints={
           customBreakpoints || {
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 15,
-            },
+            
             768: {
               slidesPerView: 2,
-              spaceBetween: 15,
+              spaceBetween: 40,
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 15,
+              spaceBetween: 40,
             },
           }
         }

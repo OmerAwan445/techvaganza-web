@@ -34,8 +34,8 @@ const footerContent = {
                     link: "/about-us",
                 },
                 {
-                    name: "Careers",
-                    link: "/careers",
+                    name: "Contact Us",
+                    link: "/contact-us",
                 },
                 {
                     name: "Privacy Policy",

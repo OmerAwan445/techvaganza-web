@@ -36,7 +36,10 @@ const Footer: React.FC = () => {
               {column.title}
             </Typography>
             {column.links.map((link, index) =>
-              <Link underline={"none"}  key={link.name} href={link.link} sx={{ ':hover' : { color: 'text.secondary'}}} color="background.light" display="block">{link.name}</Link>
+              <>
+              <Link underline={"none"}  key={link.name} href={link.link} sx={{ display: 'inline-block', ':hover' : { color: 'text.secondary'}}} color="background.light" display="block">{link.name}</Link>
+              <br/>
+              </>
             )}
           </Grid>
           )}

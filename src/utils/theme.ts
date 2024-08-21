@@ -12,7 +12,6 @@ declare module "@mui/material/styles" {
   }
 }
 
-/* Blue, Green Red. Pink */
 
 const theme = createTheme({
   palette: {
@@ -32,7 +31,7 @@ const theme = createTheme({
       dark: '#3A83A8', // Darker version of Light Blue
     },
     text: {
-      primary: '#c3c1e4', // Soft Blue-Gray for primary text
+      primary: '#4e4a8b', // Soft Blue-Gray for primary text
       secondary: '#EEEEEE', // Light Gray for secondary text
     },
   },

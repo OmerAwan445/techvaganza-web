@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={`${poppins.className} bg-[#f7f4f7]`}>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <NavbarLayout>{children}</NavbarLayout>
