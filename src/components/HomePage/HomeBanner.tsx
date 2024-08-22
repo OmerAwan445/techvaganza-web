@@ -1,6 +1,7 @@
 import homepageContent from "@/content/homepage";
 import { Box, Button, Container, Typography } from "@mui/material";
 import { FlipWords } from "../ui/flip-words";
+import Link from "next/link";
 
 const HomeBanner = () => {
   const { changingText, staticText, description } = homepageContent.banner;
@@ -59,14 +60,16 @@ const HomeBanner = () => {
           {description}
         </Typography>
         <Box>
+          <Link href="/contact-us">
           <Button
             variant="contained"
             color="secondary"
             size="large"
             sx={{ mt: 4, marginRight: 2 }}
-          >
+            >
             Schedule Free Strategy Call
           </Button>
+            </Link>
           <Button
             sx={{
               mt: 4,

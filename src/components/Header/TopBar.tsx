@@ -17,7 +17,7 @@ const TopBar = () => {
     <Box
       sx={{
         display: { xs: "none", md: "block" },
-        bgcolor: "secondary.main",
+        bgcolor: "secondary.dark",
         height: "40px",
         color: "#fff",
       }}

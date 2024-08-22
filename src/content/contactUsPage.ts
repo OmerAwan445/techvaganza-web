@@ -13,7 +13,7 @@ const contactUsContent = {
        text: "Web Development"
     }, 
     {
-       value: "depos",
+       value: "devops",
        text: "DevOps"
     }, 
     {

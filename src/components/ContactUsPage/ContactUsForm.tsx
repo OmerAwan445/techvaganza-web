@@ -5,17 +5,17 @@ import { Label } from "@/components/ui/label";
 import contactUsContent from "@/content/contactUsPage";
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
-import { useFormState, useFormStatus } from "react-dom";
-import FormSubmitButton from "./FormSubmitButton";
+import { useFormState } from "react-dom";
 import { ErrorMessageToast } from "../commons/ErrorMessageToast";
 import SucessMessageToast from "../commons/SucessMessageToast";
+import FormSubmitButton from "./FormSubmitButton";
 
-export default function SignupFormDemo() {
+export default function ContactUsForm() {
   const { formDesc, formTitle, servicesOffered } = contactUsContent;
   const [state, formAction] = useFormState(contactUsFormAction, null);
   let { error, success } = state || {};
   const [errorMessage, setErrorMessage] = useState<string | null | undefined>(null);
-      const [successMessage, setSuccessMessage] = useState<string | null| undefined>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null| undefined>(null);
 
 useEffect(() => {
   setErrorMessage(error);

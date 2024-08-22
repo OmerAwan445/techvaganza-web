@@ -33,7 +33,8 @@ function CustomNavbar() {
   };
 
   return (
-    <Box sx={{ height: "65px", width: "100%", bgcolor: theme.palette.primary.main }}>
+    <Box sx={{ height: "65px", width: "100%", background: "linear-gradient(45deg, #5680E9, #8860D0, #5AB9EA)",
+    }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: "space-around"}}>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
