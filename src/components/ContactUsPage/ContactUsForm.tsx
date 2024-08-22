@@ -1,17 +1,30 @@
 "use client";
+import { contactUsFormAction } from "@/actions/contactUsFormAction";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import contactUsContent from "@/content/contactUsPage";
 import { cn } from "@/lib/utils";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useFormState, useFormStatus } from "react-dom";
+import FormSubmitButton from "./FormSubmitButton";
+import { ErrorMessageToast } from "../commons/ErrorMessageToast";
+import SucessMessageToast from "../commons/SucessMessageToast";
 
 export default function SignupFormDemo() {
   const { formDesc, formTitle, servicesOffered } = contactUsContent;
+  const [state, formAction] = useFormState(contactUsFormAction, null);
+  let { error, success } = state || {};
+  const [errorMessage, setErrorMessage] = useState<string | null | undefined>(null);
+      const [successMessage, setSuccessMessage] = useState<string | null| undefined>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form submitted");
-  };
+useEffect(() => {
+  setErrorMessage(error);
+},[error])
+
+useEffect(() => {
+  setSuccessMessage(success);
+},[success])
+
 
   return (
     <div className="md:max-w-lg w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
@@ -22,34 +35,38 @@ export default function SignupFormDemo() {
         {formDesc}
       </p>
 
-      <form className="my-8" onSubmit={handleSubmit}>
+      <form className="my-8" action={formAction}>
+      {successMessage && <SucessMessageToast sucessMessage={successMessage} setSucessMessage={setSuccessMessage} />}
+      {errorMessage && <ErrorMessageToast errorMessage={errorMessage} setErrorMessage={setErrorMessage}/>}
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">First Name</Label>
-            <Input id="firstname" placeholder="Tyler" type="text" />
+            <Input id="firstname" name="firstname" placeholder="Tyler" type="text" />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname">Last Name</Label>
-            <Input id="lastname" placeholder="Durden" type="text" />
+            <Input id="lastname" name="lastname" placeholder="Durden" type="text" />
           </LabelInputContainer>
         </div>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="email">Email Address</Label>
-            <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+            <Input id="email" name="email" placeholder="projectmayhem@fc.com" type="email" />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="phonenumber">Phone Number</Label>
-            <Input id="phonenumber" placeholder="+1 (908) 123 4567" type="tel" />
+            <Input id="phonenumber" name="phonenumber" placeholder="+1 (908) 123 4567" type="tel" />
           </LabelInputContainer>
+          
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="service">Service Needed</Label>
           <select
-            id="service"
+          defaultValue={""}
+            id="service" name="service"
             className="block w-full px-3 py-2 text-sm border rounded-md shadow-sm outline-2 outline-[#a3a3a3] sm:text-sm border-gray-300"
           >
-            <option value="" disabled selected>
+            <option value="" disabled>
               Select a service
             </option>
             {servicesOffered.map(({value, text})=>
@@ -61,35 +78,19 @@ export default function SignupFormDemo() {
         <LabelInputContainer className="mb-8">
         <Label htmlFor="message">Message</Label>
         <textarea
-          id="message"
+          id="message" name="message"
           placeholder="Your message here"
           rows={4}
           className="block w-full px-3 py-2 text-sm border rounded-md shadow-sm outline-2 outline-[#a3a3a3] sm:text-sm border-gray-300"
         />
       </LabelInputContainer>
-
-        <button
-          className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-          type="submit"
-        >
-          Submit &rarr;
-          <BottomGradient />
-        </button>
-
+      <FormSubmitButton />
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
       </form>
     </div>
   );
 }
 
-const BottomGradient = () => {
-  return (
-    <>
-      <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
-      <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
-    </>
-  );
-};
 
 const LabelInputContainer = ({
   children,

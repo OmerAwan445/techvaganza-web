@@ -13,8 +13,12 @@ const contactUsContent = {
        text: "Web Development"
     }, 
     {
-        value: "depos",
+       value: "depos",
        text: "DevOps"
+    }, 
+    {
+       value: "customized-pos",
+       text: "Customized POS"
     } 
 ],
         
