@@ -1,11 +1,11 @@
-import ContactUs from '@/components/ContactUsPage/ContactUs'
-import { Box } from '@mui/material'
-import React from 'react'
+"use client";
+
+import ContactUs from "@/components/ContactUsPage/ContactUs";
 
 const ContactUsPage = () => {
   return (
-      <ContactUs/>
-  )
-}
+      <ContactUs />
+  );
+};
 
-export default ContactUsPage
+export default ContactUsPage;

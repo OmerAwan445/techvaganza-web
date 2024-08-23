@@ -45,6 +45,18 @@ const homepageContent = {
         "We offer top-notch web development services, building responsive and scalable web applications using the latest technologies to meet your specific business needs and objectives.",
     },
     {
+      title: "Web Development",
+      imageUrl: "/images/event cards/EventCard-1.jpg",
+      description:
+        "We offer top-notch web development services, building responsive and scalable web applications using the latest technologies to meet your specific business needs and objectives.",
+    },
+    {
+      title: "DevOps Solutions",
+      imageUrl: "/images/event cards/EventCard-2.jpg",
+      description:
+        "Our DevOps services streamline your software development process, integrating development and operations teams to deliver faster and more reliable software solutions.",
+    },
+    {
       title: "DevOps Solutions",
       imageUrl: "/images/event cards/EventCard-2.jpg",
       description:

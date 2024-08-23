@@ -1,11 +1,14 @@
 'use client';
 
-import 'swiper/css';
 import { FC, ReactNode } from 'react';
-import 'swiper/css/free-mode';
-import { FreeMode } from "swiper/modules";
+import 'swiper/css';
+import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import { Swiper } from "swiper/react";
-import { Box } from '@mui/material';
+
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+// import "swiper/css/navigation";
+
 
 export interface SliderProps {
     children: ReactNode
@@ -18,31 +21,50 @@ const FreeModeSlider: FC<SliderProps> = ({
 }) => {
 
   return (
-    <Box>
       <Swiper
-        slidesPerView="auto"
-        spaceBetween={40}
-        draggable={true}
-        freeMode={true}
-        modules={[FreeMode]}
-        breakpoints={
-          customBreakpoints || {
-            
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 40,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 40,
-            },
-          }
-        }
-        className='custom-Slider !w-auto mySwiper'
+      slidesPerView={'auto'}
+      spaceBetween={50}
+      // grabCursor={true}
+      // navigation={true}
+      freeMode={true}
+      pagination={{
+         clickable: true,
+       }}
+       autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+       breakpoints={customBreakpoints || {
+        760: {
+          slidesPerView: 1,
+          spaceBetween: 50,
+        },
+        830: {
+          slidesPerView: 2,
+          spaceBetween: 50,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 70,
+        },
+        1185: {
+          slidesPerView: 2,
+          spaceBetween: 70,
+        },
+        1370: {
+          slidesPerView: 3,
+          spaceBetween: 70,
+        },
+        1600: {
+          slidesPerView: 3,
+          spaceBetween: 70,
+        },
+      }}
+        modules={[FreeMode, Pagination, Autoplay]}
+        className='h-[580px] !px-6 lg:!px-14'
         >
         {children}
       </Swiper>
-    </Box>
   )
 }
 

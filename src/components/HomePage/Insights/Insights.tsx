@@ -32,17 +32,17 @@ const Insights = () => {
           py: 7,
         }}
       >
-        <Container>
+        <Container maxWidth="xl">
           <SlideWrapper>
             <Typography
               variant="h3"
               align="center"
               color="white"
-              sx={{ fontWeight: 400, marginBottom: 3 }}
+              sx={{ fontWeight: 400}}
             >
               Services & Products
             </Typography>
-            <Grid
+           {/*  <Grid
               sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
               container
               spacing={4}
@@ -62,8 +62,8 @@ const Insights = () => {
                   <EventCard {...el} />
                 </Grid>
               ))}
-            </Grid>
-            <Box sx={{ display: { xs: "block", md: "block", lg: "none" } }}>
+            </Grid> */}
+            <Box className="h-full">
               <FreeModeSlider>
                 {insights.map((el) => (
                   <SwiperSlide key={el.title}>

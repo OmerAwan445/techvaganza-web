@@ -3,18 +3,18 @@
 import React from 'react';
 import { useFormStatus } from 'react-dom';
 
-const FormSubmitButton = () => {
+const FormSubmitButton = ({ isDisabled }: { isDisabled: boolean }) => {
   const { pending } = useFormStatus();
 
   return (
     <button
-      className={`relative group/btn block w-full h-10 rounded-md font-medium text-white transition-all duration-300 ${
-        pending
-          ? 'bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] animate-pulse'
-          : 'bg-gradient-to-br from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]'
-      }`}
+    className={`mt-3 relative group/btn block w-full h-10 rounded-md font-medium text-white transition-all duration-300 ${
+      pending || isDisabled
+        ? 'bg-gradient-to-br from-gray-400 via-gray-500 to-gray-600 cursor-not-allowed opacity-70 shadow-none'
+        : 'bg-gradient-to-br from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]'
+    }`}
       type="submit"
-      disabled={pending}
+      disabled={pending || isDisabled}
     >
       {pending ? (
         <>

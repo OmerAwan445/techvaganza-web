@@ -17,7 +17,9 @@ const ServiceCard = ({
   return (
     <Card
       sx={{
-        maxWidth: 350,
+        mt: 5,
+        maxWidth: {'xs': '100%', 'md': 420},
+        minWidth: {'xs': '100%', 'sm': 370},
         minHeight: 500,
         maxHeight: 650,
         position: "relative",
@@ -26,7 +28,7 @@ const ServiceCard = ({
         backgroundColor: "#1c1c1e",
         transition: "transform 0.4s ease-in-out",
         "&:hover": {
-          transform: "scale(1.1)",
+          transform: "scale(1.04)",
           boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)",
         },
       }}
