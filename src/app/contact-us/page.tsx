@@ -1,11 +1,16 @@
-import ContactUs from '@/components/ContactUsPage/ContactUs'
-import { Box } from '@mui/material'
-import React from 'react'
+"use client";
+
+import ContactUs from "@/components/ContactUsPage/ContactUs";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 const ContactUsPage = () => {
   return (
-      <ContactUs/>
-  )
-}
+    <GoogleReCaptchaProvider
+      reCaptchaKey={process.env.NEXT_PUBLIC_reCAPTCHA_SITE_KEY ?? "NOT DEFINED"}
+    >
+      <ContactUs />
+    </GoogleReCaptchaProvider>
+  );
+};
 
-export default ContactUsPage
+export default ContactUsPage;
