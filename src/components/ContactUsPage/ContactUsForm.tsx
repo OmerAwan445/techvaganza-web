@@ -28,16 +28,21 @@ export default function ContactUsForm() {
   useEffect(() => {
     if(isCaptchaError) {
       resetCaptcha();
+      
     }
   },[isCaptchaError, resetCaptcha]);
 
   useEffect(() => {
-    if(success){
-      resetCaptcha();
-    }
     setSuccessMessage(success);
-  }, [success, resetCaptcha]);
- 
+  }, [success]);
+  
+ useEffect(() => {
+  if(success){
+    resetCaptcha();
+  }
+ },[success, resetCaptcha]);
+
+
   return (
     <div className="md:max-w-lg w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">

@@ -15,6 +15,7 @@ export function useReCaptcha() {
 
   const resetCaptcha = () => {
     recaptchaRef.current?.reset();
+    setIsCaptchaChecked(false);
   };
 
   return {

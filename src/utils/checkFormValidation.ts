@@ -1,30 +1,27 @@
-type ValidationResult = { isValid: boolean; errorMessage: string | null };
+import { FormValidationError } from "@/errors/FormValidationError";
 
-function checkFormValidation(data: Omit<ContactusFormData,'phone'| 'message' | 'last_name'>): ValidationResult {
-    const { first_name, email, service_needed } = data;
+function checkFormValidation(data: Omit<ContactusFormData, 'phone' | 'message' | 'last_name'>): void {
+  const { first_name, email, service_needed } = data;
 
- // Name validation
- if (!first_name) {
-    return {isValid: false, errorMessage: "First Name is required."};
+  // Name validation
+  if (!first_name) {
+    throw new FormValidationError("First Name is required.", "first_name");
   } else if (first_name.length < 2) {
-    return {isValid: false, errorMessage: "Name must be at least 2 characters long."};
+    throw new FormValidationError("Name must be at least 2 characters long.", "first_name");
   }
 
   // Email validation
   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
   if (!email) {
-    return {isValid: false, errorMessage: "Email is required."};
+    throw new FormValidationError("Email is required.", "email");
   } else if (!emailPattern.test(email)) {
-    return {isValid: false, errorMessage: "Please enter a valid email address."};
+    throw new FormValidationError("Please enter a valid email address.", "email");
   }
 
   // Service validation
   if (!service_needed) {
-    return {isValid: false, errorMessage: "Please select Service needed"};
+    throw new FormValidationError("Please select Service needed", "service_needed");
   }
-  // If all validations pass
-  return {isValid: true, errorMessage: null};
 }
-
 
 export { checkFormValidation };
