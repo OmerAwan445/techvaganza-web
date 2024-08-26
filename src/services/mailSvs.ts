@@ -2,7 +2,6 @@ import { EmailError } from "@/errors/EmailError";
 import { getEnv } from "@/utils/getEnv";
 import nodemailer from "nodemailer";
 
-
 class EmailSvs {
   private static toSendEmail = true;
 
@@ -16,12 +15,12 @@ class EmailSvs {
     },
     secure: true,
   });
-  
-  public static async sendContactUsEmail(userData: ContactusFormData) {
+
+  public static async sendContactUsEmail(userData: ContactUsFormData) {
     if (!this.toSendEmail) {
       return "Email sending disabled";
     }
-    
+
     const { first_name, last_name, email, message } = userData;
 
     const mailOptions = {
@@ -34,17 +33,20 @@ class EmailSvs {
       <p>Message: ${message}</p>
       `,
     };
-    
+
     try {
-    await this.transporter.sendMail(mailOptions);
-      
+      await this.transporter.sendMail(mailOptions);
     } catch (error: any) {
       console.log(error, "error");
-      
-      if (error.code === 'ECONNREFUSED' || error.code === 'ETIMEDOUT') {
-        throw new EmailError('Unable to connect to the email server. Please try again later.');
-      } else if (error.code === 'EAUTH') {
-        throw new EmailError('Email authentication failed. Please check your credentials.');
+
+      if (error.code === "ECONNREFUSED" || error.code === "ETIMEDOUT") {
+        throw new EmailError(
+          "Unable to connect to the email server. Please try again later."
+        );
+      } else if (error.code === "EAUTH") {
+        throw new EmailError(
+          "Email authentication failed. Please check your credentials."
+        );
       } else {
         throw new EmailError(`Failed to send email: ${error.message}`);
       }

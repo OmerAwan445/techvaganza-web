@@ -26,15 +26,11 @@ const StatsSection = () => {
             <Typography variant="h4" color="primary.dark" gutterBottom>
               {homepageContent.statsContentMainTitle}
             </Typography>
-            <Typography
-              variant="body1"
-              color="text.primary"
-              paragraph
-            >
+            <Typography variant="body1" color="text.primary" paragraph>
               {homepageContent.statsContentDescription}
             </Typography>
             <Link
-              href="/about-us"
+              href="/about"
               color="primary"
               underline="hover"
               sx={{ fontSize: "1rem", fontWeight: "bold" }}

@@ -2,46 +2,57 @@ import { contactUsFormAction } from "@/actions/contactUsFormAction";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import contactUsContent from "@/content/contactUsPage";
+import { useReCaptcha } from "@/hooks/useReCaptcha";
 import { cn } from "@/lib/utils";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormState } from "react-dom";
 import ReCAPTCHA from "react-google-recaptcha";
 import { ErrorMessageToast } from "../commons/ErrorMessageToast";
 import SucessMessageToast from "../commons/SucessMessageToast";
 import FormSubmitButton from "./FormSubmitButton";
-import { useReCaptcha } from "@/hooks/useReCaptcha";
 
 export default function ContactUsForm() {
   const { formDesc, formTitle, servicesOffered } = contactUsContent;
 
-  const { handleChange, handleExpired, isCaptchaChecked, recaptchaRef, resetCaptcha} = useReCaptcha();
-  
-  const [state, formAction] = useFormState(contactUsFormAction.bind(null, recaptchaRef.current?.getValue() ?? ''), null);
+  const {
+    handleChange,
+    handleExpired,
+    isCaptchaChecked,
+    recaptchaRef,
+    resetCaptcha,
+  } = useReCaptcha();
+
+  const [state, formAction] = useFormState(
+    contactUsFormAction.bind(null, recaptchaRef.current?.getValue() ?? ""),
+    null
+  );
   let { error, success, isCaptchaError } = state || {};
-  const [errorMessage, setErrorMessage] = useState<string | null | undefined>(null);
-  const [successMessage, setSuccessMessage] = useState<string | null | undefined>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null | undefined>(
+    null
+  );
+  const [successMessage, setSuccessMessage] = useState<
+    string | null | undefined
+  >(null);
 
   useEffect(() => {
     setErrorMessage(error);
   }, [error]);
 
   useEffect(() => {
-    if(isCaptchaError) {
+    if (isCaptchaError) {
       resetCaptcha();
-      
     }
-  },[isCaptchaError, resetCaptcha]);
+  }, [isCaptchaError, resetCaptcha]);
 
   useEffect(() => {
     setSuccessMessage(success);
   }, [success]);
-  
- useEffect(() => {
-  if(success){
-    resetCaptcha();
-  }
- },[success, resetCaptcha]);
 
+  useEffect(() => {
+    if (success) {
+      resetCaptcha();
+    }
+  }, [success, resetCaptcha]);
 
   return (
     <div className="md:max-w-lg w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
@@ -134,12 +145,12 @@ export default function ContactUsForm() {
           />
         </LabelInputContainer>
         <ReCAPTCHA
-        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!!}
-        ref={recaptchaRef}
-        onChange={handleChange}
-        onExpired={handleExpired}
-      />
-        <FormSubmitButton isDisabled={!isCaptchaChecked}/>
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!!}
+          ref={recaptchaRef}
+          onChange={handleChange}
+          onExpired={handleExpired}
+        />
+        <FormSubmitButton isDisabled={!isCaptchaChecked} />
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
       </form>
     </div>

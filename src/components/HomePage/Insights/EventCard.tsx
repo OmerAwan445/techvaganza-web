@@ -18,8 +18,8 @@ const ServiceCard = ({
     <Card
       sx={{
         mt: 5,
-        maxWidth: {'xs': '100%', 'md': 420},
-        minWidth: {'xs': '100%', 'sm': 370},
+        maxWidth: { xs: "100%", md: 420 },
+        minWidth: { xs: "100%", sm: 370 },
         minHeight: 500,
         maxHeight: 650,
         position: "relative",
@@ -96,7 +96,7 @@ const ServiceCard = ({
             variant="body2"
             component="div"
             sx={{
-              mt: 2,
+              mt: 1,
               opacity: hover ? 1 : 0,
               transition: "opacity 0.3s ease-in-out",
               textAlign: "center",

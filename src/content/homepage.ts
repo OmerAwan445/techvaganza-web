@@ -45,18 +45,6 @@ const homepageContent = {
         "We offer top-notch web development services, building responsive and scalable web applications using the latest technologies to meet your specific business needs and objectives.",
     },
     {
-      title: "Web Development",
-      imageUrl: "/images/event cards/EventCard-1.jpg",
-      description:
-        "We offer top-notch web development services, building responsive and scalable web applications using the latest technologies to meet your specific business needs and objectives.",
-    },
-    {
-      title: "DevOps Solutions",
-      imageUrl: "/images/event cards/EventCard-2.jpg",
-      description:
-        "Our DevOps services streamline your software development process, integrating development and operations teams to deliver faster and more reliable software solutions.",
-    },
-    {
       title: "DevOps Solutions",
       imageUrl: "/images/event cards/EventCard-2.jpg",
       description:
@@ -67,6 +55,18 @@ const homepageContent = {
       imageUrl: "/images/event cards/EventCard-3.jpg",
       description:
         "Our customized Point of Sale (POS) system is tailored to your business needs, providing seamless integration with your existing systems and enhancing your operational efficiency.",
+    },
+    {
+      title: "WooCommerce Store",
+      imageUrl: "/images/event cards/EventCard-4.jpg",
+      description:
+        "We design and develop powerful WooCommerce stores that are easy to manage, offering customizable solutions to help you sell your products online with ease and efficiency.",
+    },
+    {
+      title: "WordPress and WooCommerce Web Hosting",
+      imageUrl: "/images/event cards/EventCard-5.jpg",
+      description:
+        "Our specialized WordPress and WooCommerce web hosting services ensure that your online store runs smoothly, with optimized performance, security, and reliability.",
     },
   ],
 
