@@ -58,13 +58,13 @@ const homepageContent = {
     },
     {
       title: "WooCommerce Store",
-      imageUrl: "/images/event cards/EventCard-4.jpg",
+      imageUrl: "/images/event cards/EventCard-8.jpeg",
       description:
         "We design and develop powerful WooCommerce stores that are easy to manage, offering customizable solutions to help you sell your products online with ease and efficiency.",
     },
     {
       title: "WordPress and WooCommerce Web Hosting",
-      imageUrl: "/images/event cards/EventCard-5.jpg",
+      imageUrl: "/images/event cards/EventCard-7.jpg",
       description:
         "Our specialized WordPress and WooCommerce web hosting services ensure that your online store runs smoothly, with optimized performance, security, and reliability.",
     },
