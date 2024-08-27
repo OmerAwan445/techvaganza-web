@@ -14,25 +14,25 @@ export const aboutContent = {
         title: "Web Development",
         description:
           "Our web development services are at the core of what we do. We specialize in creating stunning, responsive, and user-friendly websites that not only look great but also drive results.",
-        imageUrl: "/images/services/web-development.jpg", // Add appropriate images
+        imageUrl: "/images/event cards/EventCard-10.jpg", // Add appropriate images
       },
       {
         title: "Laravel & PHP Development",
         description:
           "We offer robust backend solutions through Laravel & PHP development, ensuring your web applications are secure, scalable, and efficient.",
-        imageUrl: "/images/services/laravel-php-development.jpg", // Placeholder image URL
+        imageUrl: "/images/event cards/EventCard-5.jpg", // Placeholder image URL
       },
       {
         title: "Web Design",
         description:
           "Our web design services focus on creating visually appealing and intuitive designs that enhance user experience and reflect your brand identity.",
-        imageUrl: "/images/services/web-design.jpg", // Placeholder image URL
+        imageUrl: "/images/event cards/EventCard-11.jpg", // Placeholder image URL
       },
       {
         title: "E-commerce Solutions",
         description:
           "We provide comprehensive e-commerce solutions, from setting up online stores to integrating payment gateways, to help you succeed in the digital marketplace.",
-        imageUrl: "/images/services/ecommerce-solutions.jpg", // Placeholder image URL
+        imageUrl: "/images/event cards/EventCard-12.jpg", // Placeholder image URL
       },
     ],
   },
@@ -43,19 +43,19 @@ export const aboutContent = {
         title: "Point of Sale (POS)",
         description:
           "Our Point of Sale (POS) solution is designed to streamline your business operations, providing you with a seamless way to manage sales, inventory, and customer data.",
-        imageUrl: "/images/products/pos.jpg", // Add appropriate images
+        imageUrl: "/images/event cards/EventCard-1.jpg", // Add appropriate images
       },
       {
         title: "WooCommerce Store",
         description:
           "Take your e-commerce business to the next level with our fully optimized WooCommerce stores. We offer a complete solution that includes design, development, and ongoing support.",
-        imageUrl: "/images/products/woocommerce.jpg",
+        imageUrl: "/images/event cards/EventCard-1.jpg",
       },
       {
         title: "WordPress and WooCommerce Web Hosting",
         description:
           "Our specialized WordPress and WooCommerce hosting services ensure that your website runs smoothly and efficiently, with features like automatic updates, enhanced security, and performance optimization.",
-        imageUrl: "/images/products/hosting.jpg",
+        imageUrl: "/images/event cards/EventCard-1.jpg",
       },
     ],
   },
