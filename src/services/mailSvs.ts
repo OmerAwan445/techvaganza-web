@@ -6,8 +6,8 @@ class EmailSvs {
   private static toSendEmail = true;
 
   private static transporter = nodemailer.createTransport({
-    host: getEnv("SMTP_SERVICE"),
-    port: 465,
+    service: getEnv("SMTP_SERVICE"),
+    // port: 465,
     connectionTimeout: 10000,
     auth: {
       user: getEnv("FROM_EMAIL_NODEMAILER"),
