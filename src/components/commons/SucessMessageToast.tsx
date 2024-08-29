@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SucessMessageToast = ({ sucessMessage, setSucessMessage }:{ sucessMessage:string, setSucessMessage:React.Dispatch<React.SetStateAction<string |null | undefined>> }) => {
+const SucessMessageToast = ({ sucessMessage, setSucessMessage }:{ sucessMessage:string, setSucessMessage:React.Dispatch<React.SetStateAction<string>> }) => {
   return (
     <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4">
     <strong className="font-bold">Success!</strong>

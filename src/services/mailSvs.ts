@@ -6,6 +6,7 @@ class EmailSvs {
   private static toSendEmail = true;
 
   private static transporter = nodemailer.createTransport({
+    // host: getEnv("SMTP_SERVICE"),
     service: getEnv("SMTP_SERVICE"),
     // port: 465,
     connectionTimeout: 10000,
@@ -21,16 +22,26 @@ class EmailSvs {
       return "Email sending disabled";
     }
 
-    const { first_name, last_name, email, message } = userData;
+    const { first_name, last_name, email, message, phone, service_needed } = userData;
 
     const mailOptions = {
-      from: `"Message From ${first_name} ${last_name}" <${email}>`,
+      from: `"${first_name} ${last_name}" <${getEnv("FROM_EMAIL_NODEMAILER")}>`,
       to: getEnv("TO_EMAIL_NODEMAILER"),
-      subject: `Contact Us Message from ${first_name} ${last_name}`,
+      replyTo: email,
+      subject: `New Contact Us Message from ${first_name} ${last_name}`,
       html: `
-      <p>Message from: ${first_name} ${last_name}</p>
-      <p>Email: ${email}</p>
-      <p>Message: ${message}</p>
+        <h2>New Contact Us Message</h2>
+        <p><strong>From:</strong> ${first_name} ${last_name}</p>
+        <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Service Needed:</strong> ${service_needed}</p>
+        <hr/>
+        <p><strong>Message:</strong></p>
+        <blockquote>${message}</blockquote>
+        <hr/>
+        <p>You can reply to this message directly by clicking <a href="mailto:${email}">here</a>.</p>
+        <p>Best regards,</p>
+        <p>Your Website Team</p>
       `,
     };
 

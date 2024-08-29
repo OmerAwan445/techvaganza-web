@@ -1,6 +1,6 @@
 
 
-export function ErrorMessageToast({ errorMessage, setErrorMessage }:{ errorMessage:string, setErrorMessage:React.Dispatch<React.SetStateAction<string |null | undefined>> }) {
+export function ErrorMessageToast({ errorMessage, setErrorMessage }:{ errorMessage:string, setErrorMessage:React.Dispatch<React.SetStateAction<string>> }) {
     if(!errorMessage) return null;
 
     return (
