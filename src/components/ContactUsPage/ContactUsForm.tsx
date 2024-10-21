@@ -16,43 +16,26 @@ export default function ContactUsForm() {
 
   const {
     handleChange,
+    captchaErrorMsg,
+    setCaptchaErrorMsg,
+    captchaSuccessMessage, setCaptchaSuccessMessage,
     handleExpired,
     isCaptchaChecked,
     recaptchaRef,
-    resetCaptcha,
+    handleReCaptchaState,
   } = useReCaptcha();
-
   const [state, formAction] = useFormState(
     contactUsFormAction.bind(null, recaptchaRef.current?.getValue() ?? ""),
     null
   );
   let { error, success, isCaptchaError } = state || {};
-  const [errorMessage, setErrorMessage] = useState<string | null | undefined>(
-    null
-  );
-  const [successMessage, setSuccessMessage] = useState<
-    string | null | undefined
-  >(null);
-
+  
+  
   useEffect(() => {
-    setErrorMessage(error);
-  }, [error]);
-
-  useEffect(() => {
-    if (isCaptchaError) {
-      resetCaptcha();
+    if (error || success) {
+      handleReCaptchaState(error, success, isCaptchaError);
     }
-  }, [isCaptchaError, resetCaptcha]);
-
-  useEffect(() => {
-    setSuccessMessage(success);
-  }, [success]);
-
-  useEffect(() => {
-    if (success) {
-      resetCaptcha();
-    }
-  }, [success, resetCaptcha]);
+  }, [error, success, isCaptchaError]);
 
   return (
     <div className="md:max-w-lg w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
@@ -64,16 +47,16 @@ export default function ContactUsForm() {
       </p>
 
       <form action={formAction} className="my-8">
-        {successMessage && (
+        {captchaSuccessMessage && (
           <SucessMessageToast
-            sucessMessage={successMessage}
-            setSucessMessage={setSuccessMessage}
+            sucessMessage={captchaSuccessMessage}
+            setSucessMessage={setCaptchaSuccessMessage}
           />
         )}
-        {errorMessage && (
+        {captchaErrorMsg && (
           <ErrorMessageToast
-            errorMessage={errorMessage}
-            setErrorMessage={setErrorMessage}
+            errorMessage={captchaErrorMsg}
+            setErrorMessage={setCaptchaErrorMsg}
           />
         )}
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
