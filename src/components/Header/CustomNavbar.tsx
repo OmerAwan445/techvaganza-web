@@ -1,6 +1,6 @@
 "use client";
 
-import LOGO from "@/assets/Logo/Techvaganza_Site_Logo.jpeg";
+import LOGO from "@/assets/Logo/Techvaganza_Site_Logo.png";
 import headerContent from "@/content/header";
 import { Divider, Drawer, Stack, useTheme } from "@mui/material";
 import Box from "@mui/material/Box";
@@ -105,7 +105,7 @@ function CustomNavbar() {
 
           {/* Logo */}
           <Box sx={{ flexGrow: 1, alignItems: "center" }}>
-            <Image src={LOGO} alt="Techvaganza Logo" width={200} height={250} />
+            <Image src={LOGO} alt="Techvaganza Logo" className="w-28"/>
           </Box>
 
           <Box
