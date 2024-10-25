@@ -51,8 +51,8 @@ Make sure you have the following installed:
 Clone this repository:
 
 ```bash
-git clone https://github.com/Hasnat-Ahmed-Goheer/TechVaganza-web.git
-cd TechVaganza-web
+git clone https://github.com/OmerAwan445/techvaganza-web.git
+cd techvaganza-web
 ```
     
 Install dependencies:
